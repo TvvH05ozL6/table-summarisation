@@ -1,0 +1,170 @@
+[
+    {
+        "Year": "2011",
+        "Game": "Batman: Arkham City",
+        "Genre": "Action-Adventure: Brawler, Stealth",
+        "Platform(s)": "PlayStation 3, Xbox 360",
+        "Developer(s)": "Rocksteady Studios"
+    },
+    {
+        "Year": "2010",
+        "Game": "Super Mario Galaxy 2",
+        "Genre": "Platformer",
+        "Platform(s)": "Wii",
+        "Developer(s)": "Nintendo EAD Tokyo Development Group"
+    },
+    {
+        "Year": "2009",
+        "Game": "Uncharted 2: Among Thieves",
+        "Genre": "Action-Adventure: (Third-Person) Shooter",
+        "Platform(s)": "PlayStation 3",
+        "Developer(s)": "Naughty Dog Software"
+    },
+    {
+        "Year": "2008",
+        "Game": "Grand Theft Auto IV",
+        "Genre": "Open World: (Third-Person) Shooter",
+        "Platform(s)": "PlayStation 3, Windows, Xbox 360",
+        "Developer(s)": "Rockstar North Ltd."
+    },
+    {
+        "Year": "2007",
+        "Game": "Super Mario Galaxy",
+        "Genre": "Platformer",
+        "Platform(s)": "Wii",
+        "Developer(s)": "Nintendo EAD Tokyo Development Group"
+    },
+    {
+        "Year": "2006",
+        "Game": "The Legend of Zelda: Twilight Princess",
+        "Genre": "Action-adventure",
+        "Platform(s)": "Wii, Nintendo GameCube",
+        "Developer(s)": "Nintendo EAD Software Development Group No. 3"
+    },
+    {
+        "Year": "2005",
+        "Game": "Resident Evil 4",
+        "Genre": "Survival Horror: (Third-Person) Shooter",
+        "Platform(s)": "GameCube, PlayStation 2, Windows, Wii",
+        "Developer(s)": "Capcom"
+    },
+    {
+        "Year": "2004",
+        "Game": "Half-Life 2",
+        "Genre": "(First-Person) Shooter",
+        "Platform(s)": "Windows, Xbox 360, Xbox, PlayStation 3",
+        "Developer(s)": "Valve Corporation"
+    },
+    {
+        "Year": "2003",
+        "Game": "The Legend of Zelda: The Wind Waker?",
+        "Genre": "Action-Adventure",
+        "Platform(s)": "GameCube",
+        "Developer(s)": "Nintendo EAD Software Development Group No. 3"
+    },
+    {
+        "Year": "2002",
+        "Game": "Metroid Prime",
+        "Genre": "(First-Person) Action-Adventure",
+        "Platform(s)": "GameCube",
+        "Developer(s)": "Retro Studios, Nintendo"
+    },
+    {
+        "Year": "2001",
+        "Game": "Halo: Combat Evolved",
+        "Genre": "(First-Person) Shooter",
+        "Platform(s)": "Xbox, Windows",
+        "Developer(s)": "Bungie Studios"
+    },
+    {
+        "Year": "2000",
+        "Game": "Metal Gear Solid",
+        "Genre": "Stealth: Action-Adventure",
+        "Platform(s)": "Game Boy Color",
+        "Developer(s)": "Tose"
+    },
+    {
+        "Year": "1999",
+        "Game": "Soulcalibur",
+        "Genre": "Fighting: Hack & Slash",
+        "Platform(s)": "Dreamcast, Namco System 12, iOS, Xbox Live Arcade",
+        "Developer(s)": "Namco"
+    },
+    {
+        "Year": "1998",
+        "Game": "The Legend of Zelda: Ocarina of Time",
+        "Genre": "Action-Adventure: Open World",
+        "Platform(s)": "Nintendo 64, Nintendo GameCube, iQue Player, Virtual Console, Nintendo 3DS",
+        "Developer(s)": "Nintendo EAD"
+    },
+    {
+        "Year": "1997",
+        "Game": "GoldenEye 007",
+        "Genre": "(First-Person) Shooter",
+        "Platform(s)": "Nintendo 64",
+        "Developer(s)": "Rare, Nintendo"
+    },
+    {
+        "Year": "1996",
+        "Game": "Super Mario 64",
+        "Genre": "Platformer: Open World",
+        "Platform(s)": "Nintendo 64, iQue Player, Nintendo DS, Virtual Console",
+        "Developer(s)": "Nintendo EAD"
+    },
+    {
+        "Year": "1995",
+        "Game": "Chrono Trigger",
+        "Genre": "Role-Playing Game",
+        "Platform(s)": "Super NES, PlayStation, Nintendo DS, Virtual Console, PlayStation Network, iOS",
+        "Developer(s)": "Squaresoft"
+    },
+    {
+        "Year": "1994",
+        "Game": "Final Fantasy VI",
+        "Genre": "Role-Playing Game",
+        "Platform(s)": "Super NES, Virtual Console",
+        "Developer(s)": "Squaresoft"
+    },
+    {
+        "Year": "1993",
+        "Game": "The Legend of Zelda: Link's Awakening",
+        "Genre": "Action-Adventure",
+        "Platform(s)": "Game Boy, Game Boy Color",
+        "Developer(s)": "Nintendo EAD"
+    },
+    {
+        "Year": "1992",
+        "Game": "The Legend of Zelda: A Link to the Past",
+        "Genre": "Action-Adventure",
+        "Platform(s)": "Super NES, Virtual Console",
+        "Developer(s)": "Nintendo EAD"
+    },
+    {
+        "Year": "1991",
+        "Game": "Sonic the Hedgehog[130]",
+        "Genre": "(Side-Scrolling) Platformer",
+        "Platform(s)": "Sega Genesis / Mega Drive, Game Boy Advance, Mobile",
+        "Developer(s)": "Sonic Team"
+    },
+    {
+        "Year": "1990",
+        "Game": "Motocross Maniacs",
+        "Genre": "Racing",
+        "Platform(s)": "Game Boy",
+        "Developer(s)": "Konami"
+    },
+    {
+        "Year": "1989",
+        "Game": "Tetris",
+        "Genre": "Puzzle",
+        "Platform(s)": "Game Boy",
+        "Developer(s)": "Bullet Proof Software"
+    },
+    {
+        "Year": "1988",
+        "Game": "Phantasy Star II",
+        "Genre": "Role-Playing Game",
+        "Platform(s)": "Mega Drive / Genesis, Virtual Console, Xbox Live Arcade, iOS",
+        "Developer(s)": "Sega"
+    }
+]

@@ -1,0 +1,276 @@
+.main-header {
+  max-height: unset;
+  color: white;
+
+  .logo {
+    color: $logo-color !important;
+    background-color: $skin-color-darker !important;
+
+  }
+
+  .navbar {
+    background-color: $skin-color !important;
+    display: flex;
+    align-items: center;
+
+    .buttons {
+      margin-left: auto;
+      margin-right: 20px;
+      text-align: center;
+    }
+  }
+
+  .sidebar-toggle:hover {
+    background-color: $skin-color-darker !important;
+  }
+}
+
+// sidebar toggle
+.sidebar-toggle {
+  font-size: 14px;
+  border-right: 1px solid rgba(white, 0.60);
+  padding: 15px 15px 15px 10px !important;
+  z-index: 1001;
+
+  &:before {
+    content: "" !important;
+  }
+
+  .panel-icon {
+    width: 14px;
+    height: 14px;
+    border: 2px solid white;
+    border-radius: 2px;
+    margin-left: 10px;
+    position: relative;
+    display: block;
+    box-sizing: unset;
+
+    &:before {
+      content: "";
+      height: inherit;
+      background: white;
+      position: absolute;
+      transition: all 0.5s;
+      box-sizing: inherit;
+      left: 0;
+      width: 35%;
+    }
+  }
+
+  &:hover {
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    border-right: 1px solid $anchor-color-hover;
+
+    .panel-icon:before {
+      left: -7px;
+      width: 2px;
+    }
+  }
+}
+
+.sidebar-collapse .sidebar-toggle {
+  .panel-icon:before {
+    left: -7px;
+    width: 2px;
+  }
+
+  &:hover {
+    .panel-icon:before {
+      left: 0;
+      width: 35%;
+    }
+  }
+}
+
+.main-sidebar {
+  z-index: 1000 !important;
+
+  .sidebar-menu {
+    // fix icon width to support fontawesome 5 new prefix
+    & > li > a {
+      & > .fas, & > .far {
+        width: 20px;
+      }
+    }
+
+    & > li.active > a {
+      border-left-color: $skin-color !important;
+    }
+
+    //separator
+    //&:after {
+    //  content: "";
+    //  width: 90%;
+    //  height: 1px;
+    //  background: rgba(255, 255, 255, .3);
+    //  display: block;
+    //  margin-top: 5px;
+    //  left: 50%;
+    //  position: relative;
+    //  transform: translateX(-50%);
+    //}
+
+  }
+
+  .sidebar {
+    margin-top: 5px;
+  }
+
+  .treeview {
+    // icon with small text
+    .with-text {
+      position: relative;
+      left: -10px;
+
+      span {
+        font-size: 9px;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        position: absolute;
+        top: 75%;
+        left: 60%;
+      }
+    }
+
+    // composed download icon
+    #download_ann_complete {
+      .fa-layers {
+        display: inline-block;
+        position: relative;
+        left: -4px;
+        animation: buzz;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transition: all 0.2s;
+      }
+
+      .fa-file-download {
+        font-size: 17px;
+      }
+
+      .fa-circle {
+        color: tomato;
+        font-size: 6px;
+        position: absolute;
+        left: -1px;
+        top: -1px;
+      }
+
+      .fa-eye {
+        font-size: 10px;
+        position: absolute;
+        right: -5px;
+        bottom: -3px;
+        text-shadow: (-2px) 0 $secondary-color, 0 2px $secondary-color, 2px 0 $secondary-color, 0 -2px $secondary-color;
+      }
+    }
+  }
+}
+
+.sidebar-collapse .main-sidebar {
+  .pull-right {
+    @include breakpoint('small') {
+      display: none !important;
+    }
+
+  }
+}
+
+.control-sidebar {
+  z-index: 999 !important;
+  height: calc(100vh - 50px - 8px);
+  overflow: hidden;
+
+
+  #infoBox {
+    height: calc(100vh - 50px - 8px);
+  }
+}
+
+.control-sidebar-open {
+  position: fixed;
+  right: 0;
+  top: 50px;
+  height: calc(100vh - 50px);
+}
+
+.control-sidebar-bg {
+  z-index: 998 !important;
+}
+
+.content-wrapper {
+  overflow: auto;
+  position: relative;
+}
+
+.content {
+  padding: 5px !important;
+  position: relative;
+  min-height: auto;
+
+  & > .row {
+    &, & > .col {
+      height: 100%;
+    }
+  }
+}
+
+.wrapper, .content-wrapper, .content {
+  overflow-x: hidden;
+}
+
+// error message
+#error {
+  background: #11181b;
+  opacity: 0.8;
+  color: white;
+  padding: 2px 5px;
+  font-size: 13px;
+  position: fixed;
+  bottom: 15px;
+  left: 60px;
+  border-radius: 3px;
+  z-index: 9999999;
+}
+
+@keyframes buzz {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  4% {
+    transform: rotate(10deg);
+  }
+
+  8% {
+    transform: rotate(-10deg);
+  }
+
+  12% {
+    transform: rotate(10deg);
+  }
+
+  16% {
+    transform: rotate(-10deg);
+  }
+
+  20% {
+    transform: rotate(10deg);
+  }
+
+  24% {
+    transform: rotate(-10deg);
+  }
+
+  28% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}

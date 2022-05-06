@@ -1,0 +1,49 @@
+{% extends "mantistablex/base-dashboard.html" %}
+
+{% block title %}
+{{ block.super }}
+{% endblock %}
+
+{% block css %}
+{{ block.super }}
+
+{% load static %}
+<link rel="stylesheet" href="{% static '/mantistablex/css/gazeCloudApi.css' %}">
+
+{% endblock %}
+
+{{ block.super }}
+
+{% block table_info %}
+<ul class="tableInfo">
+    <li class="name">{{ table.name }}</li>
+</ul>
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid" id="showGoogleModule">
+    <div class="row flex" id="display-start">
+        <div class="col col-sm-12">
+            <div class="box box-solid">
+                <iframe frameborder="0" height="1080" marginheight="0" marginwidth="0"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLScUuHG_8x1gDXSHrEJuS1NhieakOwpsltDNL4gYbYngeM_1zg/viewform?embedded=true">
+                    Loading…
+                </iframe>
+            </div>
+        </div>
+        <div class="col col-sm-12">
+            <div class="box box-solid">
+                <iframe frameborder="0" height="1080" marginheight="0" marginwidth="0"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdtcH931Ucq6wiOgsiR_kqSoeZGvQ6gT8L6BKzcCajoKHZkow/viewform?embedded=true">
+                    Loading…
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+{{ block.super }}
+{% endblock %}

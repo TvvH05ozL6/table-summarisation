@@ -1,0 +1,513 @@
+body {
+  font-family: $font;
+  overflow: auto;
+}
+
+.wrapper {
+  z-index: 1;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: $skin-color;
+  transition: all .2s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $skin-color-darker;
+    //border: 1px solid transparent;
+  }
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title-center {
+  text-align: center;
+}
+
+// buttons
+.btn {
+  transition: background-color 0.2s;
+
+  &.btn-primary {
+    background-color: $anchor-color;
+    border-color: $anchor-color;
+
+    &:hover {
+      background-color: $anchor-color-hover;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: rgba($secondary-color, .9);
+    color: white;
+
+    &:hover {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+    }
+  }
+
+  &.alert-danger {
+    border-color: $danger;
+  }
+
+  &.btn-outline-primary {
+    background: transparent;
+    border: 1px solid $skin-color;
+    color: $skin-color;
+
+    &:hover {
+      border-color: $skin-color-darker;
+      color: $skin-color-darker;
+    }
+  }
+
+  &.btn-outline-secondary {
+    &,
+    &:focus,
+    &:active {
+      background: transparent;
+      border: 1px solid $secondary-color;
+      color: $secondary-color;
+    }
+
+    i {
+      color: inherit;
+      line-height: 1;
+    }
+
+    &:hover {
+      background: $secondary-color;;
+      color: white;
+      vertical-align: middle;
+
+    }
+
+    &:active {
+
+      outline: none;
+    }
+  }
+
+  &.btn-outline-danger {
+    background: transparent;
+    border: 1px solid $danger;
+    color: $danger;
+
+    &:hover {
+      border-color: $danger-darker;
+      color: $danger-darker;
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed !important;
+    pointer-events: auto !important;
+  }
+
+  &.load {
+    position: relative;
+
+    .loading {
+      position: absolute;
+      margin: 0;
+      left: 0;
+      top: 0;
+      background: rgba(236, 240, 245, 0.75);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: inherit;
+    }
+  }
+
+  &.tiny {
+    padding: 2px 15px;
+    vertical-align: text-bottom;
+  }
+
+  .action {
+    font-size: 14px;
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .process {
+    font-size: 12px;
+    display: block;
+  }
+
+  &:active {
+    box-shadow: unset !important;
+  }
+}
+
+//modal
+.modal {
+  .btn {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 10px 0 30px;
+    display: inline-block;
+  }
+
+  .small {
+    font-style: italic;
+  }
+
+  .modal-title,
+  .modal-content,
+  .modal-footer {
+    text-align: center;
+  }
+
+  .modal-title {
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  .modal-content {
+    font-size: 18px;
+
+    i {
+      font-size: 7rem;
+      color: rgba(3, 7, 9, 0.46);
+      margin-right: 15px;
+
+      &.fa-check {
+        font-size: 5rem;
+        vertical-align: sub;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 2rem 3rem;
+
+    .flex {
+      align-items: center;
+      text-align: left;
+    }
+  }
+
+}
+
+// info table on header
+.tableInfo {
+  margin: 0 30px 0 0;
+  list-style: none;
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  color: $infoTable-color;
+  padding: 0;
+
+  li {
+    padding: 0 15px;
+    list-style-type: none;
+    color: $white;
+    border-bottom: none;
+    @include breakpoint('medium') {
+      padding: 0 20px;
+
+    }
+  }
+
+  .name {
+    font-size: 14px;
+    font-style: italic;
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @include breakpoint('small') {
+      font-size: 16px;
+    }
+
+    @include breakpoint('medium') {
+      font-size: 18px;
+    }
+  }
+
+  .stats {
+    text-align: center;
+  }
+
+  .number,
+  .description {
+    display: block;
+    line-height: 1;
+  }
+
+  .number {
+    font-weight: bold;
+    font-size: 18px;
+
+    @include breakpoint('small') {
+      font-size: 22px;
+    }
+
+    &.smaller {
+      font-size: 16px;
+      padding: 3px 0;
+      @include breakpoint('small') {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .description {
+    font-size: 10px;
+    @include breakpoint('small') {
+      font-size: 12px;
+    }
+  }
+
+  .border-left {
+    border-left: 1px solid white;
+  }
+}
+
+// accordion
+.accordion {
+  max-width: 700px;
+  margin: auto;
+
+  .panel-heading {
+    background: #e6e6e6;
+  }
+
+  .panel-title a {
+    display: block;
+    font-size: 20px;
+    color: $anchor-color;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $anchor-color-hover;
+    }
+
+  }
+}
+
+// pre
+pre {
+  font-size: 11px;
+}
+
+// tables
+table {
+  word-break: break-word;
+
+  th.empty {
+    background-color: transparent !important;
+    border: none !important;
+  }
+
+  border-color: #9da7ad !important;
+
+  td, th {
+    border-color: #9da7ad !important;
+  }
+
+  th {
+    border-bottom: none !important;
+  }
+
+  &:not(.size-auto) {
+    td {
+      max-width: 300px;
+      //min-width: 250px;
+
+
+    }
+  }
+
+  .value {
+    //text-align: center;
+    //height: 80px;
+    //white-space: nowrap;
+    //overflow: hidden;
+    //text-overflow: ellipsis;
+  }
+
+  td.highlight {
+    background: rgba($skin-color, .2) !important;
+  }
+
+  th.highlight {
+    background: rgba($skin-color, .4) !important;
+  }
+
+  &.no-hover > tbody > tr:hover {
+    background-color: transparent
+  }
+
+  &.table-columns {
+    td {
+      background-color: white;
+    }
+  }
+
+}
+
+.sde-table {
+
+  th {
+    text-transform: uppercase;
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 4px !important;
+  }
+
+  td {
+    background-color: white;
+
+    vertical-align: middle !important;
+
+  }
+}
+
+.margin-btn {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+// tipography
+p {
+  &.tiny {
+    font-size: .8rem;
+    margin: 0.4rem 0;
+  }
+
+  &.center-block {
+    padding: 0 1.8rem .5rem;
+    margin: 0;
+  }
+}
+
+span {
+  &.uppercase {
+    text-transform: uppercase;
+  }
+}
+
+//box
+.box-solid {
+  .box-header {
+    text-align: center;
+  }
+}
+
+.annotation-box {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+
+.image-width {
+  width: 100px;
+}
+
+//card content
+.card-content {
+  word-break: break-all;
+  margin: 2rem .5rem 2rem 0;
+  background: white;
+  padding: 1rem .3rem;
+
+  &.big-padding {
+    padding: 2rem;
+  }
+
+  &.border {
+    border: 2px solid $light-gray;
+  }
+}
+
+.alert {
+  &.alert-warning {
+    background-color: transparent !important;
+    color: $secondary-color !important;
+
+    h4 {
+      color: #f39c12;
+    }
+
+    .btn {
+      text-decoration: none;
+    }
+  }
+}
+
+.warning-wrapper {
+  max-width: 600px;
+  margin: 40px auto;
+
+  .alert {
+    background: white !important;
+  }
+
+  .btn {
+    margin-top: 20px;
+  }
+}
+
+.radio-card {
+  input {
+    display: none;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    border: 1px solid $light-gray;
+    border-radius: 4px;
+    background: lighten($light-gray, 50%);
+    padding: 12px;
+    opacity: .8;
+    cursor: pointer;
+    height: 100%;
+  }
+
+  .title {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+
+    display: block;
+  }
+
+  .description {
+    margin-top: 12px;
+  }
+
+  input:checked + .text {
+    border-color: $skin-color;
+    background: rgba($skin-color, .2);
+    opacity: 1;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+}

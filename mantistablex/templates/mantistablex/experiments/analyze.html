@@ -1,0 +1,240 @@
+{% extends "mantistablex/base-dashboard.html" %}
+
+{% block title %}
+{{ block.super }}
+Table &quot;{{ table.name }}&quot;
+{% endblock %}
+
+{% block css %}
+
+{{ block.super }}
+{% load static %}
+<link rel="stylesheet" href="{% static '/mantistablex/css/gazeCloudApi.css' %}">
+
+{% endblock %}
+
+{{ block.super }}
+
+{% block content %}
+<div class="container-fluid" id="analyze">
+
+    <div class="row">
+        <div class="col col-sm-12 flex align-center">
+            <h1>Analyze {{table.name}}</h1>
+        </div>
+    </div>
+
+    <div class="row flex align-center">
+        <div class="col col-sm-10 presentation-box">
+            <div class="row flex align-center">
+                <div class="col col-md-9">
+                    <h3 id="title_analyze"></h3>
+
+                </div>
+                <div class="col col-md-3">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="select_option"
+                                type="button">
+                                <span class="button_select">
+                                    <img alt="english flag" src="{% static 'mantistablex/images/flag_uk.png' %}">
+                                      English
+                                </span>
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li class="selected" id="english">
+                                <img alt="english flag" src="{% static 'mantistablex/images/flag_uk.png' %}">
+                                English
+                            </li>
+                            <li id="italian">
+                                <img alt="italy flag" src="{% static 'mantistablex/images/flag_italy.png' %}">
+                                Italiano
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-it">
+                <p>
+                    Nalla sezione successiva verrà visualizzata una tabella. L'obiettivo di questo esperimento è la
+                    <span class="bold"> misurazione del grado di comprensione del contenuto</span>.
+                </p>
+                <p>
+                    Potrai visionare ed analizzare la tabella per tutto il <span class="bold">tempo necessario</span>.
+                    Quando avrai terminato l'analisi, verrà visualizzato un link che porterà ad un form. Questo form
+                    presenterà delle domande riguardanti il contenuto a cui dovrai rispondere.
+                </p>
+                <p>
+                    Nella pagina seguente è presente un <span class="bold">bottone</span> che avvierà la procedura di
+                    <span class="bold">calibrazione dell'eye tracking</span>.
+                    Terminata la procedura di <span class="bold">calibrazione</span> (da fare con molta attenzione) si
+                    procederà con <span class="bold">l'esperimento</span>.
+                </p>
+                <p>
+                    L'indagine si svolge in questo modo:
+                </p>
+                <ul>
+                    <li>
+                        <span class="bold">Eye tracking</span> - Si visualizza la tabella per il tempo necessario alla
+                        comprensione.
+                        Per comprensione si indica il <span class="bold">rilevamento del soggetto</span> della tabella e
+                        l'analisi delle informazioni all'interno delle <span class="bold">righe</span> che a tuo parere
+                        siano <span class="bold">maggiormente rilevanti.</span><br/>
+                        Immagina di dover preparare un esame per l'università o una certificazione per il lavoro dove
+                        alcune informazioni sono presentate in formato tabellare.
+                        Prenditi tutto il tempo che ti occorre per esplorare le tabelle che ti verranno presentate e,
+                        solo quando sei sicuro di averle comprese, passa alla schermata successiva.<br/>
+                        Durante questa procedura verrano <span class="bold">memorizzati i tuoi movimenti oculari</span>.
+                    </li>
+                    <li>
+                        <span class="bold">Termine esperimento</span> - Una volta terminata l'analisi e la comprensione
+                        dei dati all'interno della tabella, cliccare il <span class="bold">bottone "stop"</span>.
+                    </li>
+                    <li>
+                        <span class="bold">Attenzione! Ricordarsi di prestare attenzione sia alla struttura che ai dati che compongono la tabella</span>.
+                    </li>
+                </ul>
+
+                <div class="flex align-center margin-btn">
+                    <a class="btn btn-primary btn-xl" href="{% url 'eyeTracking' table.id %}">
+                        <span class="text">Inizia l'esperimento</span>
+                    </a>
+                </div>
+
+                <div class="row flex align-center">
+                    <div class="col col-sm-10 presentation-box">
+
+                <span class="h5">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Informativa sulla privacy
+                </span>
+                        <p class="tiny">
+                            Gentile volontario/a ,
+                        </p>
+                        <p class="tiny">
+                            Desideriamo informarLa che il D.lgs. n. 196 del 30 giugno 2003 e GDPR ("Codice in materia di
+                            protezione dei dati personali")
+                            prevede la tutela delle persone e di altri soggetti rispetto al trattamento dei dati
+                            personali, che rimarranno anonimi e utilizzati solo ai fini di questa ricerca.
+                            Secondo la normativa indicata, tale trattamento sarà improntato ai principi di correttezza,
+                            liceità e trasparenza e di tutela della Sua riservatezza e dei Suoi diritti.
+                        </p>
+                        <p class="tiny">
+                            Grazie
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-en">
+                <p>
+                    During next section we would see a table. The experiment purpose is <span class="bold"> valuing the content comprehension degree</span>.
+                </p>
+                <p>
+                    You should see and analyze the table <span class="bold">as long as you want</span>.
+                    When the analysis is end, you would see a link that would transfer you to a form. Then tou would to
+                    have to answer to some questions about the table's content.
+                </p>
+                <p>
+                    In the next page there is a <span class="bold">button</span> that would start the <span
+                        class="bold">calibration eye tracking</span>.
+                    At the end of this procedure - pay attention - <span class="bold">the experiment would start</span>.
+                </p>
+                <p>
+                    The enquery role like this:
+                </p>
+                <ul>
+                    <li>
+                        <span class="bold">Eye tracking</span> - You would see the table as long as you would understand
+                        it.
+                        With understanding the table we mean the comprehension of the <span
+                            class="bold">table subject</span> and the <span class="bold">more relevant information analysis</span>
+                        - in the row.<br/>
+                        Imagine that you are preparing an university exam or a work certification where some information
+                        are in table format.
+                        Take all time you need in order to explore all tables. Only when you are sure that you have
+                        understand all the information, go to next step.<br/>
+                        During this procedure all your <span class="bold">eyes movement would be registered</span>.
+                    </li>
+                    <li>
+                        <span class="bold">Experiment end</span> - At the end of table's data comprehension and
+                        analysis, press the <span class="bold">button "stop"</span>.
+                    </li>
+                    <li>
+                        <span class="bold">Warning! Take care about table's structure and data</span>.
+                    </li>
+                </ul>
+
+
+                <div class="flex align-center margin-btn">
+                    <a class="btn btn-primary btn-xl" href="{% url 'eyeTracking' table.id %}">
+                        <span class="text">Start the experiment</span>
+                    </a>
+                </div>
+
+                <div class="row flex align-center">
+                    <div class="col col-sm-10 presentation-box">
+
+                <span class="h5">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Privacy Policy
+                </span>
+                        <p class="tiny">
+                            Dear volunteer,
+                        </p>
+                        <p class="tiny">
+                            We wish to inform you that Legislative Decree n. 196 of 30 June 2003 and GDPR ("The
+                            protection of personal data code") provides for the protection of people and other subjects
+                            regarding the processing of personal data, which will remain anonymous and used only for the
+                            purpose of this research.
+                            According to the legislation indicated, this treatment will be based on the principles of
+                            correctness, lawfulness and transparency and protection of your privacy and your rights.
+                        </p>
+                        <p class="tiny">
+                            Thank you
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+{{ block.super }}
+<script>
+  function toggleLanguage (language) {
+    if (language === 'Italiano') {
+      $('#title_analyze').text('Analisi e comprensione delle tabelle');
+      $('.content-en').hide();
+      $('.content-it').show();
+      $('#select_option .button_select').html('<img src="/static/mantistablex/images/flag_italy.png"  alt="italy flag" >Italiano');
+      $('#italian').addClass('selected');
+      $('#english').removeClass('selected');
+    } else {
+      $('#title_analyze').text('Tables\' analysis and understanding');
+      $('.content-en').show();
+      $('.content-it').hide();
+      $('#select_option .button_select').html('<img src="/static/mantistablex/images/flag_uk.png"  alt="english flag" >English');
+      $('#italian').removeClass('selected');
+      $('#english').addClass('selected');
+    }
+  }
+
+  $('#title_analyze').text('Tables\' analysis and understanding');
+  $('.content-en').show();
+  $('.content-it').hide();
+
+  $('#italian').click(function () {
+    toggleLanguage('Italiano');
+  });
+
+  $('#english').click(function () {
+    toggleLanguage('English');
+  });
+</script>
+{% endblock %}

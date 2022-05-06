@@ -1,0 +1,60 @@
+/* ===============
+   GENERAL SETTINGS
+   =============== */
+
+// font
+$font: 'Roboto', sans-serif;
+
+// colors
+$skin-color: rgb(146, 168, 90); //rgb(158, 140, 17);
+$skin-color-darker: scale-color($skin-color, $lightness: -30%);
+$secondary-color: #222d32;
+$secondary-color-darker: scale-color($secondary-color, $lightness: -10%);
+$danger: #b8001d;
+$danger-darker: scale-color($danger, $lightness: -10%);
+$section-light-gray: #f6f6f6;
+$section-medium-gray: #e8e8e8;
+$section-dark-gray: #cfcfcf;
+$light-gray: #818690;
+$medium-gray: #e8e8e8;
+$dark-gray: #212121;
+$white: #fff;
+$light-blue: #00acd6;
+
+
+/* ===============
+   HOME SETTINGS
+   =============== */
+
+// background
+$home-up-bg: #222d32;
+$home-bottom-bg: $skin-color;
+
+$home-bg-deg: -184;
+// 180 = horizontal
+// +/- 4deg
+// > 180 top to bottom
+// < 180 bottom to top
+
+//text color
+$home-title-color: white;
+$home-text-color: white;
+// button
+$home-btn-color: white;
+$home-btn-hover-color: $skin-color;
+$home-btn-hover-bg: white;
+
+// anchor
+$anchor-color: $skin-color;
+$anchor-color-hover: $skin-color-darker;
+
+
+/* ===============
+   TEMPLATE SETTINGS
+   =============== */
+
+$logo-color: white;
+$infoTable-color: $secondary-color; //white;
+
+
+$spacer:0.25rem;

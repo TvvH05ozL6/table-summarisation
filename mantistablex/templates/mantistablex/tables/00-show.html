@@ -1,0 +1,129 @@
+{% extends "mantistablex/base-dashboard.html" %}
+
+{% block title %}
+    {{ block.super }}
+    Table &quot;{{ table.name }}&quot;
+{% endblock %}
+
+{% block table_info %}
+    <ul class="tableInfo">
+        <li class="name">{{ table.name }} - {{ table.file_name }}</li>
+        <li class="stats">
+            <span class="number">{{ table.num_cols }}</span>
+            <span class="description">columns</span>
+        </li>
+        <li class="stats">
+            <span class="number">{{ table.num_rows }}</span>
+            <span class="description">rows</span>
+        </li>
+        <li class="stats">
+            <span class="number">{{ annotations_count }}</span>
+            <span class="description">annotations</span>
+        </li>
+    </ul>
+{% endblock %}
+
+<!-- base-process -->
+{% block process %}
+    {% if table.process %}
+        <div class="multiStep-horizontal">
+            {% include 'mantistablex/multistep.html' with step_index=0 show_next=annotations_complete %}
+            <!-- close arrow-->
+            <i class="fas fa-chevron-up close-multistep"></i>
+
+        </div>
+    {% endif %}
+{% endblock %}
+<!-- base-process -->
+
+
+{% block content %}
+
+    <div class="flex flex-dir-column h100 table-wrapper">
+        <div class="table-responsive ">
+            <table class="table table-striped table-bordered sde-table" id="table-bootstrap"></table>
+        </div>
+
+        <div class="mt-auto bottom-box">
+            <div class="box box-solid annotation-box">
+                <div class="box-title flex align-space-between internal-spacer">
+                    <h4>Annotations for {{ table.name }}</h4>
+                    <a class="btn btn-secondary btn-xs" href="{% url 'addAnnotation' table.id %}">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>Add annotation</span>
+                    </a>
+                </div>
+
+                <div class="box-body">
+                    {% if annotations %}
+                        <table class="table table-bordered table-hover" id="list-table">
+                            <thead>
+                            <tr>
+                                <th class="name">NAME</th>
+                                <th class="file_name">FILE NAME</th>
+                                <th class="gs_type">GOLD STANDARD TYPE</th>
+                                <th class="actions">ACTIONS</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            {% for annotation in annotations %}
+                                <tr>
+                                    <td class="name">{{ annotation.table }}</td>
+                                    <td class="file_name">{{ annotation.file_name }}</td>
+                                    <td class="gs_type">{{ annotation.gs_type }}</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-primary btn-xs"
+                                               href="{% url 'editAnnotation' annotation.id %}">
+                                                <i class="glyphicon glyphicon-cog"></i>
+                                                <span>Edit</span>
+                                            </a>
+                                            <a class="btn btn-danger btn-xs"
+                                               href="{% url 'deleteAnnotation' annotation.id %}">
+                                                <i class="glyphicon glyphicon-trash"></i>
+                                                <span>Delete</span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            {% endfor %}
+                            </tbody>
+                        </table>
+
+                        {% if not annotations_complete %}
+                            <div class="alert alert-warning mt-4" role="alert">
+                                <h4 class="alert-heading">Warning!</h4>
+                                <p>Uplaod annotations for each STI task (CTA, CPA, CEA)</p>
+                            </div>
+                        {% endif %}
+                    {% else %}
+                        <div class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Warning!</h4>
+                            <p>No annotations yet.</p>
+                        </div>
+
+                    {% endif %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+    {{ block.super }}
+
+    <script>
+      $(function () {
+        const rawData = {{ table_datas_bootstrap | safe }};
+        const header = {{ table_header_bootstrap | safe }};
+
+        initTable(header, rawData);
+      });
+    </script>
+
+
+{% endblock %}

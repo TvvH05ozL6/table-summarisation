@@ -1,0 +1,162 @@
+{% extends "mantistablex/base-dashboard.html" %}
+
+{% block title %}
+    {{ block.super }}
+    GenerateSummary
+{% endblock %}
+
+{% block css %}
+
+    {{ block.super }}
+    {% load static %}
+{% endblock %}
+
+{{ block.super }}
+
+{% block table_info %}
+    <ul class="tableInfo">
+        <li class="name">{{ table.name }} - {{ table.file_name }}</li>
+        <li class="stats">
+            <span class="number">{{ table.num_cols }}</span>
+            <span class="description">columns</span>
+        </li>
+        <li class="stats">
+            <span class="number">{{ table.num_rows }}</span>
+            <span class="description">rows</span>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block process %}
+    {% if table.process %}
+        <div class="multiStep-horizontal">
+            {% include 'mantistablex/multistep.html' with step_index=1 show_next=True %}
+            <i class="fas fa-chevron-up close-multistep"></i>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="select-familiarity flex flex-dir-column h100 table-wrapper">
+        <div class="table-responsive ">
+            <table class="table table-striped table-bordered sde-table" id="table-bootstrap"></table>
+        </div>
+
+        <div class="mt-auto bottom-box">
+            <div class="box box-solid selection-box">
+                <form id="form" method="post" action="{% url 'triplesViz' table.id %}">
+                    {% csrf_token %}
+
+                    {{ familiarity_interest_form.highlightIndexes }}
+                    <div class="flex flex-dir-column  col col-sm-6">
+                        <div class="title-center h4">Select your degree of <strong>familiarity</strong> with the domain
+                            of the table
+                        </div>
+
+                        <div class="flex grid">
+                            {% for choice in familiarity_interest_form.familiarityChoices %}
+                                <div class="radio-card">
+                                    {{ choice }}
+                                </div>
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex flex-dir-column col col-sm-6 separator-horizontal separator-sm-vertical">
+                        <div class="title-center h4">Select your degree of <strong>interest</strong> with the domain of
+                            the table
+                        </div>
+
+                        <div class="flex  grid">
+                            {% for choice in familiarity_interest_form.interestChoices %}
+                                <div class="radio-card">
+                                    {{ choice }}
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+    {{ block.super }}
+
+    <script>
+      function getHighlightData (tableData) {
+        {#From a qualitative inspections of the heat maps we derived different patterns of ocular behaviour. By combining those patterns with questionnaires’ answers related to prior knowledge and interest, we observe that: (i) those who do not possess prior knowledge of a given domain, pay more attention to the first columns on the left, where the subject is usually placed; (ii) those who have previous knowledge adopt a different behaviour according to the number of columns: if the table has less than six columns, the user tends to observe all of them. On the contrary, if the number of columns is greater or equal to six, the user focuses only on the subject column and then moves on to the columns on the right of the table. Regarding participants’ interest in the content of each table, those who are not interested in the table’s domain mainly observe the header and at most the first eight rows; and those who are interested in the table’s domain analyse all or most of its content.#}
+        const subjectIndex = parseInt({{ subject_index }});
+        const familiarity = $("input[name='{{familiarity_interest_form.familiarityChoices.name}}']:checked").val();
+        const interest = $("input[name='{{familiarity_interest_form.interestChoices.name}}']:checked").val();
+        const colNumber = Object.keys(tableData[ 0 ]).length;
+
+        const all_col_indexes = [...Array(colNumber).keys()];
+        let no_subj_col_indexes = all_col_indexes.slice();
+        no_subj_col_indexes.splice(all_col_indexes.indexOf(subjectIndex), 1);
+
+        let colIndexes = [];
+        let rowIndexes = [];
+
+        if (familiarity === '0') {
+          colIndexes.push(subjectIndex);
+
+          if (interest === '0') {
+
+            if (colNumber > 1)
+              colIndexes.push(subjectIndex + 1);
+
+          } else {
+            colIndexes.push(...no_subj_col_indexes.splice(0, no_subj_col_indexes.length >= 3 ? 3 : no_subj_col_indexes.length));
+          }
+
+        } else if (familiarity === '1') {
+          if (colNumber < 6) {
+            colIndexes = all_col_indexes;
+          } else {
+            colIndexes.push(subjectIndex);
+            colIndexes.push(...no_subj_col_indexes.splice(no_subj_col_indexes.length - 3, 3));
+
+          }
+        }
+        if (interest === '0') {
+          const rowNumber = tableData.length >= 8 ? 8 : tableData.length;
+          rowIndexes = [...Array(rowNumber).keys()];
+        } else if (interest === '1') {
+          rowIndexes = [...Array(tableData.length).keys()];
+        }
+
+        // backend need row indexes start from 1
+        const backend_row_indexes = rowIndexes.map(index => index+1)
+        $("#{{ familiarity_interest_form.highlightIndexes.auto_id }}").val(JSON.stringify({ colIndexes, rowIndexes: backend_row_indexes }));
+        return { colIndexes, rowIndexes };
+      }
+
+      $(function () {
+        const rawData = {{ table_datas_bootstrap | safe }};
+        const header = {{ table_header_bootstrap | safe }};
+        const highlightedData = getHighlightData(rawData);
+        initTable(header, rawData, highlightedData);
+
+        const $familiarityForm = $("input[name='{{familiarity_interest_form.familiarityChoices.name}}']");
+        const $interestForm = $("input[name='{{familiarity_interest_form.interestChoices.name}}']");
+        $('input:radio').on('change', function () {
+          reInitTable(header, rawData, getHighlightData(rawData));
+        });
+
+        $('.next').on('click', function (e) {
+          e.preventDefault();
+          $('#form').submit();
+
+        });
+      });
+    </script>
+
+{% endblock %}
+

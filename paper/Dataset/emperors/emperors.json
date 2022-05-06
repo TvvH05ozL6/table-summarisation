@@ -1,0 +1,548 @@
+[
+  {
+    "Emperor": "Balbinus",
+    "BirthDate": "63 BC",
+    "DeathDate": "14 AD",
+    "Reign": "27 BC"
+  },
+  {
+    "Emperor": "Commodus",
+    "BirthDate": "42 BC",
+    "DeathDate": "37AD",
+    "Reign": "14 AD"
+  },
+  {
+    "Emperor": "Vespasian",
+    "BirthDate": "12 AD",
+    "DeathDate": "41 AD",
+    "Reign": "37 AD"
+  },
+  {
+    "Emperor": "Carus",
+    "BirthDate": "10 BC",
+    "DeathDate": "54 AD",
+    "Reign": "41 AD"
+  },
+  {
+    "Emperor": "Licinius",
+    "BirthDate": "37 AD",
+    "DeathDate": "68 AD",
+    "Reign": "54 AD"
+  },
+  {
+    "Emperor": "Valerian (emperor)",
+    "BirthDate": "3 BC",
+    "DeathDate": "69 AD",
+    "Reign": "68 AD"
+  },
+  {
+    "Emperor": "Philip the Arab",
+    "BirthDate": "32 AD",
+    "DeathDate": "69 AD",
+    "Reign": "69 AD"
+  },
+  {
+    "Emperor": "Pupienus",
+    "BirthDate": "15 AD",
+    "DeathDate": "69 AD",
+    "Reign": "69 AD"
+  },
+  {
+    "Emperor": "Vitellius",
+    "BirthDate": "9 AD",
+    "DeathDate": "79 AD",
+    "Reign": "69 AD"
+  },
+  {
+    "Emperor": "Julius Nepos",
+    "BirthDate": "39 AD",
+    "DeathDate": "81 AD",
+    "Reign": "79 AD"
+  },
+  {
+    "Emperor": "Nero",
+    "BirthDate": "51 AD",
+    "DeathDate": "96 AD",
+    "Reign": "81 AD"
+  },
+  {
+    "Emperor": "Gratian",
+    "BirthDate": "30 AD",
+    "DeathDate": "unknown",
+    "Reign": "96 AD"
+  },
+  {
+    "Emperor": "Glycerius",
+    "BirthDate": "53 AD",
+    "DeathDate": "117 AD",
+    "Reign": "98 AD"
+  },
+  {
+    "Emperor": "Leo I the Thracian",
+    "BirthDate": "76 AD",
+    "DeathDate": "138 AD",
+    "Reign": "117 AD"
+  },
+  {
+    "Emperor": "Augustus",
+    "BirthDate": "86 AD",
+    "DeathDate": "161 AD",
+    "Reign": "138 AD"
+  },
+  {
+    "Emperor": "Maxentius",
+    "BirthDate": "130 AD",
+    "DeathDate": "169 AD",
+    "Reign": "161 AD"
+  },
+  {
+    "Emperor": "Maximinus II",
+    "BirthDate": "121 AD",
+    "DeathDate": "180 AD",
+    "Reign": "161 AD"
+  },
+  {
+    "Emperor": "Gordian III",
+    "BirthDate": "161 AD",
+    "DeathDate": "192 AD",
+    "Reign": "177 AD"
+  },
+  {
+    "Emperor": "Caracalla",
+    "BirthDate": "126 AD",
+    "DeathDate": "193 AD",
+    "Reign": "193 AD"
+  },
+  {
+    "Emperor": "Trebonianus Gallus",
+    "BirthDate": "133 or 137 AD",
+    "DeathDate": "193 AD",
+    "Reign": "193 AD"
+  },
+  {
+    "Emperor": "Aemilianus",
+    "BirthDate": "145 AD",
+    "DeathDate": "211 AD",
+    "Reign": "193 AD"
+  },
+  {
+    "Emperor": "Constans",
+    "BirthDate": "188 AD",
+    "DeathDate": "217 AD",
+    "Reign": "198 AD"
+  },
+  {
+    "Emperor": "Titus",
+    "BirthDate": "189 AD",
+    "DeathDate": "211 AD",
+    "Reign": "209 AD"
+  },
+  {
+    "Emperor": "Elagabalus",
+    "BirthDate": "c. 165 AD",
+    "DeathDate": "218 AD",
+    "Reign": "217 AD"
+  },
+  {
+    "Emperor": "Aurelian",
+    "BirthDate": "c. 203 AD",
+    "DeathDate": "222 AD",
+    "Reign": "218 AD"
+  },
+  {
+    "Emperor": "Joannes",
+    "BirthDate": "08 AD",
+    "DeathDate": "235 AD",
+    "Reign": "222 AD"
+  },
+  {
+    "Emperor": "Jovian (emperor)",
+    "BirthDate": "c.173 AD",
+    "DeathDate": "238 AD",
+    "Reign": "235 AD"
+  },
+  {
+    "Emperor": "Olybrius",
+    "BirthDate": "c.159 AD",
+    "DeathDate": "238 AD",
+    "Reign": "238 AD"
+  },
+  {
+    "Emperor": "Nerva",
+    "BirthDate": "c.192 AD",
+    "DeathDate": "238 AD",
+    "Reign": "238 AD"
+  },
+  {
+    "Emperor": "Gordian II",
+    "BirthDate": "c. 178 AD",
+    "DeathDate": "unknown",
+    "Reign": "238 AD"
+  },
+  {
+    "Emperor": "Avitus",
+    "BirthDate": "unknown",
+    "DeathDate": "238 AD",
+    "Reign": "238 AD"
+  },
+  {
+    "Emperor": "Romulus Augustulus",
+    "BirthDate": "225 AD",
+    "DeathDate": "244 AD",
+    "Reign": "238 AD"
+  },
+  {
+    "Emperor": "Otho",
+    "BirthDate": "c. 204 AD",
+    "DeathDate": "249 AD",
+    "Reign": "244 AD"
+  },
+  {
+    "Emperor": "Trajan",
+    "BirthDate": "c. 201 AD",
+    "DeathDate": "251 AD",
+    "Reign": "249 AD"
+  },
+  {
+    "Emperor": "Antoninus Pius",
+    "BirthDate": "unknown",
+    "DeathDate": "251 AD",
+    "Reign": "251 AD"
+  },
+  {
+    "Emperor": "Gallienus",
+    "BirthDate": "206 AD",
+    "DeathDate": "253 AD",
+    "Reign": "251 AD"
+  },
+  {
+    "Emperor": "Numerian",
+    "BirthDate": "c. 207 AD",
+    "DeathDate": "253 AD",
+    "Reign": "253 AD"
+  },
+  {
+    "Emperor": "Flavius Valerius Severus",
+    "BirthDate": "c. 200 AD",
+    "DeathDate": "260 AD",
+    "Reign": "253 AD"
+  },
+  {
+    "Emperor": "Publius Septimius Geta",
+    "BirthDate": "unknown",
+    "DeathDate": "268 AD",
+    "Reign": "253 AD"
+  },
+  {
+    "Emperor": "Libius Severus",
+    "BirthDate": "213 AD/214 AD",
+    "DeathDate": "270 AD",
+    "Reign": "268 AD"
+  },
+  {
+    "Emperor": "Caligula",
+    "BirthDate": "unknown",
+    "DeathDate": "270 AD",
+    "Reign": "270 AD"
+  },
+  {
+    "Emperor": "Tiberius",
+    "BirthDate": "214 AD/215 AD",
+    "DeathDate": "275 AD",
+    "Reign": "(?) 270 AD"
+  },
+  {
+    "Emperor": "Theodosius I",
+    "BirthDate": "unknown",
+    "DeathDate": "276 AD",
+    "Reign": "275 AD"
+  },
+  {
+    "Emperor": "Basiliscus",
+    "BirthDate": "unknown",
+    "DeathDate": "276 AD",
+    "Reign": "AD"
+  },
+  {
+    "Emperor": "Justin II",
+    "BirthDate": "232 AD",
+    "DeathDate": "282 AD",
+    "Reign": "276 AD"
+  },
+  {
+    "Emperor": "Honorius (emperor)",
+    "BirthDate": "c. 230 AD",
+    "DeathDate": "283 AD",
+    "Reign": "282 AD"
+  },
+  {
+    "Emperor": "Constantius Chlorus",
+    "BirthDate": "unknown",
+    "DeathDate": "284 AD",
+    "Reign": "283 AD"
+  },
+  {
+    "Emperor": "Didius Julianus",
+    "BirthDate": "unknown",
+    "DeathDate": "285 AD",
+    "Reign": "283 AD"
+  },
+  {
+    "Emperor": "Julian (emperor)",
+    "BirthDate": "244 AD",
+    "DeathDate": "311 AD",
+    "Reign": "284 AD"
+  },
+  {
+    "Emperor": "Septimius Severus",
+    "BirthDate": "c. 250 AD",
+    "DeathDate": "310 AD",
+    "Reign": "286 AD"
+  },
+  {
+    "Emperor": "Macrinus",
+    "BirthDate": "c. 250 AD",
+    "DeathDate": "306 AD",
+    "Reign": "305 AD"
+  },
+  {
+    "Emperor": "Marcus Aurelius",
+    "BirthDate": "c. 260 AD",
+    "DeathDate": "311 AD",
+    "Reign": "305 AD"
+  },
+  {
+    "Emperor": "Maximian",
+    "BirthDate": "unknown",
+    "DeathDate": "307 AD",
+    "Reign": "306 AD"
+  },
+  {
+    "Emperor": "Pertinax",
+    "BirthDate": "c. 272 AD",
+    "DeathDate": "337 AD",
+    "Reign": "306 AD"
+  },
+  {
+    "Emperor": "Claudius",
+    "BirthDate": "c. 278 AD",
+    "DeathDate": "unknown",
+    "Reign": "306 AD"
+  },
+  {
+    "Emperor": "Marcus Aurelius Probus",
+    "BirthDate": "c. 270 AD",
+    "DeathDate": "unknown",
+    "Reign": "311 AD"
+  },
+  {
+    "Emperor": "Marcus Claudius Tacitus",
+    "BirthDate": "c. 250 AD",
+    "DeathDate": "325 AD",
+    "Reign": "308 AD"
+  },
+  {
+    "Emperor": "Constantine the Great",
+    "BirthDate": "316 AD",
+    "DeathDate": "unknown",
+    "Reign": "337 AD"
+  },
+  {
+    "Emperor": "Galba",
+    "BirthDate": "317 AD",
+    "DeathDate": "unknown",
+    "Reign": "337 AD"
+  },
+  {
+    "Emperor": "Arcadius",
+    "BirthDate": "320 AD",
+    "DeathDate": "350 AD",
+    "Reign": "337 AD"
+  },
+  {
+    "Emperor": "Constantius III",
+    "BirthDate": "331 AD/332 AD",
+    "DeathDate": "unknown",
+    "Reign": "360 AD"
+  },
+  {
+    "Emperor": "Petronius Maximus",
+    "BirthDate": "331 AD",
+    "DeathDate": "unknown",
+    "Reign": "363 AD"
+  },
+  {
+    "Emperor": "Justin I",
+    "BirthDate": "321 AD",
+    "DeathDate": "unknown",
+    "Reign": "364 AD"
+  },
+  {
+    "Emperor": "Zeno (emperor)",
+    "BirthDate": "328 AD",
+    "DeathDate": "unknown",
+    "Reign": "364 AD"
+  },
+  {
+    "Emperor": "Theodosius II",
+    "BirthDate": "359 AD",
+    "DeathDate": "unknown",
+    "Reign": "367 AD"
+  },
+  {
+    "Emperor": "Constantius II",
+    "BirthDate": "371 AD",
+    "DeathDate": "unknown",
+    "Reign": "375 AD"
+  },
+  {
+    "Emperor": "Anthemius",
+    "BirthDate": "347 AD",
+    "DeathDate": "unknown",
+    "Reign": "379 AD"
+  },
+  {
+    "Emperor": "Marcian",
+    "BirthDate": "c. 377 AD",
+    "DeathDate": "408 AD",
+    "Reign": "383 AD"
+  },
+  {
+    "Emperor": "Leo II (emperor)",
+    "BirthDate": "384 AD",
+    "DeathDate": "423 AD",
+    "Reign": "393 AD"
+  },
+  {
+    "Emperor": "Gordian I",
+    "BirthDate": "401 AD",
+    "DeathDate": "450 AD",
+    "Reign": "408 AD"
+  },
+  {
+    "Emperor": "Valens",
+    "BirthDate": "unknown",
+    "DeathDate": "421 AD",
+    "Reign": "421 AD"
+  },
+  {
+    "Emperor": "Valentinian II",
+    "BirthDate": "unknown",
+    "DeathDate": "425 AD",
+    "Reign": "423 AD"
+  },
+  {
+    "Emperor": "Lucius Verus",
+    "BirthDate": "419 AD",
+    "DeathDate": "455 AD",
+    "Reign": "424 AD"
+  },
+  {
+    "Emperor": "Claudius Gothicus",
+    "BirthDate": "396 AD",
+    "DeathDate": "457 AD",
+    "Reign": "450 AD"
+  },
+  {
+    "Emperor": "Constantine II (emperor)",
+    "BirthDate": "c. 396 AD",
+    "DeathDate": "455 AD",
+    "Reign": "455 AD"
+  },
+  {
+    "Emperor": "Valentinian I",
+    "BirthDate": "c. 385 AD",
+    "DeathDate": "456 AD",
+    "Reign": "455 AD"
+  },
+  {
+    "Emperor": "Galerius",
+    "BirthDate": "420 AD",
+    "DeathDate": "unknown",
+    "Reign": "457 AD"
+  },
+  {
+    "Emperor": "Majorian",
+    "BirthDate": "unknown",
+    "DeathDate": "465 AD",
+    "Reign": "461 AD"
+  },
+  {
+    "Emperor": "Florianus",
+    "BirthDate": "c. 420 AD",
+    "DeathDate": "472 AD",
+    "Reign": "467 AD"
+  },
+  {
+    "Emperor": "Maximinus Thrax",
+    "BirthDate": "c. 420 AD",
+    "DeathDate": "472 AD",
+    "Reign": "472 AD"
+  },
+  {
+    "Emperor": "Decius",
+    "BirthDate": "unknown",
+    "DeathDate": "480 AD",
+    "Reign": "473 AD"
+  },
+  {
+    "Emperor": "Carinus",
+    "BirthDate": "c. 430 AD",
+    "DeathDate": "480 AD",
+    "Reign": "474 AD"
+  },
+  {
+    "Emperor": "Hostilian",
+    "BirthDate": "unknown",
+    "DeathDate": "480 AD",
+    "Reign": "475 AD"
+  },
+  {
+    "Emperor": "Domitian",
+    "BirthDate": "401 AD",
+    "DeathDate": "474 AD",
+    "Reign": "457 AD"
+  },
+  {
+    "Emperor": "Quintilis",
+    "BirthDate": "467 AD",
+    "DeathDate": "474 AD",
+    "Reign": "474 AD"
+  },
+  {
+    "Emperor": "Justinian I",
+    "BirthDate": "425 AD",
+    "DeathDate": "491 AD",
+    "Reign": "474 AD"
+  },
+  {
+    "Emperor": "Alexander Severus",
+    "BirthDate": "unknown",
+    "DeathDate": "476 AD",
+    "Reign": "475 AD"
+  },
+  {
+    "Emperor": "Valentinian III",
+    "BirthDate": "c. 430 AD",
+    "DeathDate": "518 AD",
+    "Reign": "491 AD"
+  },
+  {
+    "Emperor": "Diocletian",
+    "BirthDate": "c. 450 AD",
+    "DeathDate": "527 AD",
+    "Reign": "518 AD"
+  },
+  {
+    "Emperor": "Hadrian",
+    "BirthDate": "c. 482 AD",
+    "DeathDate": "565 AD",
+    "Reign": "527 AD"
+  },
+  {
+    "Emperor": "Anastasius I Dicorus",
+    "BirthDate": "c. 520 AD",
+    "DeathDate": "578 AD",
+    "Reign": "565 AD"
+  }
+]

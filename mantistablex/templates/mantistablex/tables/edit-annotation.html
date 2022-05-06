@@ -1,0 +1,227 @@
+{% extends "mantistablex/base-dashboard.html" %}
+
+{% block title %}
+    {{ block.super }}
+    Edit
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+    {% load static %}
+
+    <link href="{% static '/handsontable/dist/handsontable.full.min.css' %}" rel="stylesheet" media="screen">
+
+{% endblock %}
+
+
+{% block content %}
+    {{ block.super }}
+
+    <div class="twoSide-layout">
+    <div class="container-fluid">
+        <div class="row flex">
+
+            <div class="col col-md-6">
+                <div class="container-form">
+
+                    <h1>Edit annotations</h1>
+                    <form id="form" enctype="multipart/form-data" method="post"
+                          action="{% url 'editAnnotation' annotation.id %}">
+                        {% csrf_token %}
+                        {{ table.name }}
+
+                        <div class="form-group material file {% if invalidfile %}error{% endif %}">
+                            {{ form.json_file }}
+                            {{ form.json_file.label_tag }}
+                            {% if invalidfile %}
+                                <div class="error-message">
+                                    Insert correct file
+                                </div>
+                            {% endif %}
+
+                        </div>
+
+                        <div class="form-group dropdown material">
+                            {{ form.gs_type }}
+                            {{ form.gs_type.label_tag }}
+                        </div>
+                        <button type="submit" id="submit" class="btn btn-primary btn-block">Submit
+                            <!--<span class="glyphicon glyphicon-share-alt"></span>-->
+                        </button>
+
+                        <div>
+                            <a href="{% url 'showTable' table.id %}" class="btn btn-block">
+                                <i class="fas fa-arrow-left"></i>
+                                Back
+                            </a>
+                        </div>
+                        {% if validfile %}
+                            <div class="alert alert-success" style="text-align:center;" role="alert">
+                                ANNOTATION SUCCESSFULLY EDITED
+                            </div>
+                        {% endif %}
+                    </form>
+
+                </div>
+            </div>
+            <div class="col col-md-6 background">
+
+                <h3>File types supported</h3>
+
+                <p>
+                    At the moment, Table Summarisation only supports tables in <strong>JSON</strong> format.</p>
+
+
+                <p>JSON (JavaScript Object Notation) is a standard text-based
+                    format for representing structured data based on JavaScript object syntax.</p>
+
+
+                <pre id="pre">
+<strong>JSON example</strong>
+[
+  {
+    "MOUNTAIN": "Mount Everest",
+    "HEIGHT IN METERS": "8,848",
+    "RANGE": "Himalayas",
+    "CONQUERED ON": "May 29, 1953",
+    "COORDINATES": "27.98785, 86.92502609999997",
+    "URL": "https://en.wikipedia.org/wiki/Mount_Everest"
+  },
+  {
+    "MOUNTAIN": "K-2 (Godwin Austin)",
+    "HEIGHT IN METERS": "8,611",
+    "RANGE": "Karakoram",
+    "CONQUERED ON": "July 31, 1954",
+    "COORDINATES": "35.8799875,76.51510009999993",
+    "URL": "https://en.wikipedia.org/wiki/K2"
+  },
+  {
+    "MOUNTAIN": "Kanchenjunga",
+    "HEIGHT IN METERS": "8,597",
+    "RANGE": "Himalayas",
+    "CONQUERED ON": "May 25, 1955",
+    "COORDINATES": "27.7024914,88.14753500000006",
+    "URL": "https://en.wikipedia.org/wiki/Kangchenjunga"
+  }
+]                    </pre>
+
+
+                <p>
+
+                    If your data is in a different format, you have to convert it first. </p>
+                <p>Some tools you can use: </p>
+
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>CSV to JSON</th>
+                        <th>HTML to JSON</th>
+                        <th>Excel to JSON</th>
+
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="https://www.csvjson.com/csv2json" target="_blank">
+                                        www.csvjson.com
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="http://www.convertcsv.com/csv-to-json.htm" target="_blank">
+                                        www.convertcsv.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="https://tools.fromdev.com/table-to-json-converter.html"
+                                       target="_blank">
+                                        tools.fromdev.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://convertjson.com/html-table-to-json.htm" target="_blank">
+                                        www.convertjson.com
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="https://codebeautify.org/excel-to-json" target="_blank">
+                                        www.codebeautify.org
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+    {{ block.super }}
+
+    <script src="{% static '/handsontable/dist/handsontable.full.min.js' %}"></script>
+
+    <script>
+      //var data = [
+      //    ['', 'Ford', 'Tesla', 'Toyota', 'Honda'],
+      //    ['2017', 10, 11, 12, 13],
+      //    ['2018', 20, 11, 14, 13],
+      //    ['2019', 30, 15, 12, 13]
+      //];
+
+      var data = {{table_datas|safe}};
+      var header = {{table_header|safe}};
+
+      var container = document.getElementById('table');
+      var hot = new Handsontable(container, {
+        data: data,
+        rowHeaders: false,
+        colHeaders: header,
+        filters: true,
+        readOnly: true,
+        licenseKey: 'non-commercial-and-evaluation'
+      });
+
+      var button = document.getElementById('export-file');
+      var exportPlugin = hot.getPlugin('exportFile');
+
+      button.addEventListener('click', function () {
+        exportPlugin.downloadFile('csv', {
+          bom: false,
+          columnDelimiter: ',',
+          columnHeaders: false,
+          exportHiddenColumns: true,
+          exportHiddenRows: true,
+          fileExtension: 'csv',
+          filename: 'Handsontable-CSV-file_[YYYY]-[MM]-[DD]',
+          mimeType: 'text/csv',
+          rowDelimiter: '\r\n',
+          rowHeaders: false
+        });
+      });
+
+    </script>
+
+{% endblock %}

@@ -1,0 +1,130 @@
+{% extends "mantistablex/base-dashboard.html" %}
+{% load kw %}
+{% block title %}
+    {{ block.super }}
+    Summary
+{% endblock %}
+
+{% block css %}
+
+    {{ block.super }}
+    {% load static %}
+{% endblock %}
+
+{{ block.super }}
+{% block table_info %}
+<ul class="tableInfo">
+    <li class="name">{{ table.name }} - {{ table.file_name }}</li>
+    <li class="stats">
+        <span class="number">{{ table.num_cols }}</span>
+        <span class="description">columns</span>
+    </li>
+    <li class="stats">
+        <span class="number">{{ table.num_rows }}</span>
+        <span class="description">rows</span>
+    </li>
+
+    <li class="stats">
+    <span class="number smaller">
+        <span class="uppercase">{{ familiarity }}</span>
+    </span>
+        <span class="description">familiarity</span>
+    </li>
+
+    <li class="stats">
+    <span class="number smaller">
+        <span class="uppercase">{{ interest }}</span>
+    </span>
+        <span class="description">interest</span>
+    </li>
+</ul>
+{% endblock %}
+
+{% block process %}
+    {% if table.process %}
+        <div class="multiStep-horizontal">
+            {% include 'mantistablex/multistep.html' %}
+
+            <!-- close arrow-->
+            <i class="fas fa-chevron-up close-multistep"></i>
+
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+
+    <div id="triples-view" class="flex flex-dir-column mx-5" style="background-color:white; -webkit-box-shadow: -5px 6px 13px -2px rgba(68,68,68,0.52); 
+    box-shadow: -5px 6px 13px -2px rgba(68,68,68,0.52); padding:4rem; margin:2rem">
+
+        <div class="row-eq-height" style="margin-bottom: 40px;">
+
+            <div class="{% if neural_network_output %}col-md-6 section-light{% else %} col-xs-12 {% endif %} ">
+                <div class="body-section">
+                    <div class="container">
+                        <div class="row">
+                            <h2>Summary</h2>
+                        </div>
+                    <!-- <h3>Model</h3>
+                    <div class="container">
+                        {% for t in predictions %}
+                            <div class="row">
+                                <div class="col">
+                                    {{ t }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <h3>Table summary</h3> -->
+                    
+                        {% if familiarity == "0" %}
+                        <div class="row">
+                            <div class="col">
+                                This table is about {{ domain }}{{domainSpec}}.
+                            </div>
+                        </div>
+                        {% endif %}
+                        <div class="row">
+                            <div class="col">
+                                {% if interest == "1" %}
+                                    The table is composed of {{ rows }} rows and {{ cols }} columns.
+                                {% endif %}
+                                For each {{ domain }} information about {{header}} is available.<br><br>
+                                {% if avg.items %}
+                                    The numeric columns include 
+                                        {% for t,x in avg.items %}
+                                            {{ t }} with mean value of {{ x |floatformat:3 }}{% endfor %}.<br>
+                                {% endif %}
+                                {{ min }}{{ max }}<br><br>
+                                
+                                {% if interest == "1" %}
+                                    {{sum |safe}}<br><br>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% if interest == "1" %}
+                        <div class="row">
+                            <div class="col">
+                                <h4>Some example content following: </h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                {{ text | safe}}
+                            </div>
+                            <!-- <div class="col col-md-6">
+                                {{ triple | safe}}
+                            </div> -->
+                        </div>
+                        {% endif %}
+                        <div class="row row-eq-height" style="overflow-y: auto; margin-bottom: 40px; font-size:1.2rem; margin-left:auto; margin-right:auto;margin-top:2rem">
+                            {% with hidebutton=True %}  
+                            {% include "mantistablex/tables/triples-list.html" %}
+                            {% endwith %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

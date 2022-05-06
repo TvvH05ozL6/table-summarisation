@@ -1,0 +1,44 @@
+.twoSide-layout {
+  margin: -5px;
+
+  .inner-wrapper {
+    padding: 16px;
+  }
+
+  .background {
+    background-color: #d2d6de;
+  }
+
+  .row.flex {
+    height: calc(100vh - 50px);
+
+    & > .col {
+      overflow-y: auto;
+    }
+
+    // small only
+    @include breakpoint('small only') {
+      display: block;
+      height: auto;
+    }
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .container-form {
+    padding: 30px;
+
+    #form {
+      max-width: 350px;
+      margin: 50px auto 10px;
+    }
+
+    .btn {
+      margin-bottom: 6px;
+    }
+  }
+
+}

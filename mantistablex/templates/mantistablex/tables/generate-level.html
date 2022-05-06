@@ -1,0 +1,75 @@
+{% extends "mantistablex/base-dashboard.html" %}
+
+{% block title %}
+{{ block.super }}
+GenerateLevel
+{% endblock %}
+
+{% block css %}
+{{ block.super }}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'mantistablex/css/generateSummary.css' %}">
+{% endblock %}
+
+{% block content %}
+{{ block.super }}
+<div class="generate">
+
+    <h3>Genera la descrizione della tabella</h3>
+    <h3> Fase 3</h3>
+</div>
+<div class="boxer">
+    <div style="float: left">
+        <h4 style="display: inline">Modalità selezionata:</h4>
+        <div class="btn-group" role="group" aria-label="..." style="display: inline-block;">
+            <button type="button" class="btn text-green bold">Facile</button>
+            <button type="button" class="btn text-green">Medio</button>
+            <button type="button" class="btn text-green">Difficile</button>
+        </div>
+    </div>
+    <div style="float: right">
+        <h4>Tabella selezionata: <a href="#">{{table.file_name}}</a> <img src="{% static 'mantistablex/images/setting.png' %}" style="width: 20px; height: 20px;"></h4>
+    </div>
+</div>
+<div class="text-center line-separator" style="margin: 0;">
+    <div class="col-md-6">
+        <div class="generate">
+            <h4>Estrazione della terminologia</h4>
+            <div class="panel panel-default" style="width: 90%;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Termine estratto</h3>
+                </div>
+                <div class="panel-body" style="padding: 0;">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#">termine </a> </li>
+                        <li class="list-group-item"><a href="#">termine </a></li>
+                        <li class="list-group-item"><a href="#">termine </a></li>
+                        <li class="list-group-item"><a href="#">termine </a></li>
+                        <li class="list-group-item"><a href="#">termine </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="generate">
+            <h4>Espressioni caratterizzanti</h4>
+            <p style="width:300px;">Trascina i box nel riquadro della descrizione per aggiungere maggiori dettagli personalizzanti</p>
+        </div>
+        <div class="riquadro">
+
+        </div>
+    </div>
+</div>
+<div class="row" style="margin: 0">
+    <div class="col-md-12">
+        <div class="generate">
+            <h4>Guarda il risultato dell'NLG in tempo reale</h4>
+            <div class="result">
+                <p> Text</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

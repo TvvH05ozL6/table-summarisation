@@ -1,0 +1,177 @@
+{% extends "mantistablex/base-dashboard.html" %}
+
+{% block title %}
+{{ block.super }}
+Table &quot;{{ table.name }}&quot;
+{% endblock %}
+
+{% block css %}
+{{ block.super }}
+
+{% load static %}
+<link rel="stylesheet" href="{% static '/mantistablex/css/gazeCloudApi.css' %}">
+
+{% endblock %}
+
+{{ block.super }}
+
+{% block content %}
+
+<div id="eye-tracking-first" class="container-fluid">
+            <div class="row">
+            <div class="col col-sm-12 flex align-center margin-btn">
+                <button id='startid' class='btn btn-primary btn-xl' type="button">
+                    <i class="fas fa-play-circle"></i>
+                    Start eye tracking
+                </button>
+            </div>
+        </div>
+</div>
+
+<div id="tracking" class="container-fluid">
+    <div id="display-start" class="row flex">
+        <div class="col col-sm-12">
+            <div class="box box-solid">
+                <div class="box-body">
+                    <div class="table table-bordered table-wrapper">
+                        <table id="table-bootstrap">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="section-btn" class="row">
+        <div class="col col-sm-12 flex align-center margin-btn">
+            <button id='stopid' class='btn btn-primary btn-xl' type="button">
+                <i class="fas fa-stop-circle"></i>
+                Stop eye tracking
+            </button>
+            <a id="goModule" class='btn btn-primary btn-xl' href="{% url 'questionnaires' table.id  %}">
+                <i class="fas fa-user-edit"></i>
+                <span>Go to the final test</span>
+            </a>
+        </div>
+    </div>
+    <div id="gaze"
+         style='position: absolute;display:none;width: 100px;height: 100px;border-radius: 50%; pointer-events: none;	z-index: 999999'>
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+{{ block.super }}
+    <!-- GazeCloudAPI -->
+    <script src="{% static '/mantistablex/js/GazeCloudAPI.js' %}"></script>
+    <!-- heatmapLive -->
+    <script src="{% static '/mantistablex/js/heatmapLive.js' %}"></script>
+
+<script>
+    $('body').removeClass('sde-fixed')
+    $('#tracking').css("visibility", "hidden");
+    $('#stopid').hide();
+    $('#goModule').hide();
+
+    var rawdata = {{ table_datas_bootstrap | safe }};
+    var header = {{ table_header_bootstrap | safe }};
+
+    var columns = [];
+
+    header.forEach(element => {
+        columns.push({
+            field: element,
+            title: element
+        })
+    });
+
+    var $table = $('#table-bootstrap');
+
+    $table.bootstrapTable({
+        data: rawdata,
+        columns: columns
+    });
+
+    /*GazeCloudAPI*/
+    var resultsEyeTracking=[];
+
+    function PlotGaze(GazeData) {
+        //Results.StoreData(GazeData);
+        resultsEyeTracking.push(GazeData);
+
+        if (true) // gaze plot
+        {
+            var x = GazeData.docX;
+            var y = GazeData.docY;
+            var gaze = document.getElementById("gaze");
+            x -= gaze.clientWidth / 2;
+            y -= gaze.clientHeight / 2;
+            gaze.style.left = x + "px";
+            gaze.style.top = y + "px";
+
+            if (GazeData.state != 0) {
+                if (gaze.style.display == 'block')
+                    gaze.style.display = 'none';
+            }else {
+                    if (gaze.style.display == 'none')
+                        gaze.style.display = 'block';
+            }
+        }
+    }
+
+        //////set callbacks/////////
+        GazeCloudAPI.OnCalibrationComplete = function () { ShowHeatMap(); console.log('gaze Calibration Complete') }
+        GazeCloudAPI.OnCamDenied = function () { console.log('camera  access denied') }
+        GazeCloudAPI.OnError = function (msg) { console.log('err: ' + msg) }
+        GazeCloudAPI.UseClickRecalibration = false;
+        GazeCloudAPI.OnResult = PlotGaze;
+
+
+        $("#gaze").hide();
+
+        $('#startid').click(function(){
+            ShowHeatMap();
+            console.log('dentro');
+            $('#tracking').css("visibility", "visible");
+            $('#stopid').show();
+            $('#eye-tracking-first').hide();
+            $('#goModule').hide();
+            $('#heatmapContainerWrapper').height($('.main-header').height() + $('#tracking').height() + $('#section-btn').height());
+            GazeCloudAPI.StartEyeTracking();
+            GazeCloudAPI.SetFps(15);
+        });
+
+
+        $('#stopid').click(function() {
+            $('#heatmapContainerWrapper').height($('.main-header').height() + $('#tracking').height());
+
+            $('#goModule').show();
+            $('#stopid').hide();
+            GazeCloudAPI.StopEyeTracking();
+
+            console.log('results: ', resultsEyeTracking)
+
+            $.ajax({
+                url: "{% url 'eyeTracking' table.id %}",
+                type: 'POST',
+                headers: {"X-CSRFToken": getCookie('csrftoken')},
+                data: {results : JSON.stringify(resultsEyeTracking), table_name: "{{ table.name }}"},
+                success: function (response) {
+                    console.log('success')
+                },
+                error: function (request) {
+                    console.log('error')
+                }
+            })
+        })
+
+    $(document).ready(function() {
+        console.debug($('.main-header').height(), $('#tracking').height());
+        $('#heatmapContainerWrapper').height($('.main-header').height() + $('#tracking').height())
+    });
+
+</script>
+{% endblock %}

@@ -1,0 +1,17 @@
+The elevation of <Mountain> is <xsd:integer> meters above mean sea level
+<Mountain> belongs to the <MountainRange> mountain range
+<Mountain> was first climbed on <xsd:gYear>
+<Company> owns <xsd:double> billion dollars worth business assets
+<Company> operates in the field of <Company>
+<Company> is a company founded in <Country>
+<Company> achieves <xsd:double> billion dollars in sales
+<Company> achieves <xsd:double> billion dollars in revenue
+<Company> is ranked <xsd:integer>
+<Company> achieves <xsd:double> billion dollars in equity
+<VideoGame> genre is <VideoGame>
+<VideoGame> was released in <xsd:gYear>
+<VideoGame> is a videogame for <Device>
+<VideoGame> was developed by <Company>
+<Monarch>'s date of birth is <xsd:string>
+<Monarch>'s date of death is <xsd:string>
+The reign of <Monarch> started in <xsd:string>

@@ -1,0 +1,98 @@
+{% extends "mantistablex/base-dashboard.html" %}
+
+{% block title %}
+{{ block.super }}
+Tables
+{% endblock %}
+
+
+{% block table_info %}
+<ul class="tableInfo ">
+    <li class="stats">
+        <span class="number">{{tables_count}}</span>
+        <span class="description">tables</span>
+    </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+{{ block.super }}
+
+<div class="row">
+    <section class="col col-sm-12">
+
+
+        {% if tables %}
+        <div class="flex flex-dir-column h100">
+            <div class="no-padding  table-responsive">
+
+                <table id="list-table" class="table table-striped table-bordered sde-table">
+                    <tr>
+                        <th class="table-name">Name</th>
+                        <th class="table-date">Insert date</th>
+                        <th class="table-date">Last edit</th>
+                        <th class="table-buttons">Actions</th>
+                    </tr>
+                    {% for table in tables %}
+                    <tr>
+                        <td class="name"><strong>{{ table.name }}</strong></td>
+                        <td class="pub-date">{{ table.pub_date | date:"d/m/Y - H:i:s" }}</td>
+                        <td class="last-edit-date">{{ table.last_edit_date | date:"d/m/Y - H:i:s" }}</td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-primary btn-xs" href="{% url 'showTable' table.id %}">
+                                    <i class="glyphicon glyphicon-cog"></i>
+                                    <span>Process</span>
+                                </a>
+
+                                <a class="btn btn-info btn-xs" href="{% url 'analyzeTable' table.id %}">
+                                    <i class="glyphicon glyphicon-eye-open"></i>
+                                    <span>Experiments</span>
+                                </a>
+                                <a class="btn btn-danger btn-xs" href="{% url 'deleteTable' table.id %}">
+                                    <i class="glyphicon glyphicon-trash"></i>
+                                    <span>Delete</span>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class="mt-auto pt-2">
+                <ul class="pagination pagination-sm no-margin pull-right">
+                    {% if tables.has_previous %}
+                    <li><a href="?page=1">&laquo;</a></li>
+                    <li><a href="?page={{ tables.previous_page_number }}">{{ tables.previous_page_number }}</a></li>
+                    {% endif %}
+
+                    <li class="active"><a href="?page={{ tables.number }}">{{ tables.number }}</a></li>
+
+                    {% if tables.has_next %}
+                    <li><a href="?page={{ tables.next_page_number }}">{{ tables.next_page_number }}</a></li>
+                    <li><a href="?page={{ tables.paginator.num_pages }}">&raquo;</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+
+        {% else %}
+
+        <div class="warning-wrapper">
+            <div class="alert alert-warning text-center" role="alert">
+                <h4 class="alert-heading">Warning!</h4>
+                <p>No tables available.</p>
+
+                <div>
+                    <a class="btn btn-warning" href="{% url 'createTables' %}">Add new table</a>
+                </div>
+            </div>
+        </div>
+
+        {% endif %}
+
+
+    </section>
+
+</div>
+{% endblock %}

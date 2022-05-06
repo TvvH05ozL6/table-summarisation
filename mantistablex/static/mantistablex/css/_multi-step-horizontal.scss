@@ -1,0 +1,335 @@
+$multistep-background: #dde1e6;
+$multistep-active: $skin-color;
+$multistep-hover: $skin-color-darker;
+$multistep-disabled: #9da7ad;
+$multistep-enabled: $dark-gray;
+$multistep-distance: 100px;
+
+
+.multiStep-horizontal {
+  background: $multistep-background;
+  list-style: none;
+  transition: all .3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 10px 10px 45px 10px;
+
+  position: relative;
+
+  * {
+    transition: all 0.1s;
+  }
+
+  .item-box {
+    display: inline-block;
+    position: relative;
+  }
+
+  .close-multistep {
+    color: $multistep-enabled;
+    font-size: 14px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    font-size: 9px;
+    line-height: 1.25;
+    text-align: center;
+    margin-top: 4px;
+    width: ($multistep-distance/3)*2;
+  }
+
+  .step-box {
+    position: relative;
+    width: $multistep-distance;
+    display: flex;
+    justify-content: flex-end;
+
+    &:not(:first-child) {
+
+      // vertical line
+      &:before {
+        content: "";
+        width: $multistep-distance;
+        height: 2px;
+        background-color: $multistep-disabled;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 0;
+      }
+    }
+
+    .item-box {
+      border: none;
+      color: $multistep-disabled;
+
+      .step {
+        width: 20px;
+        height: 20px;
+        border: 2px solid $multistep-disabled;
+        background: $multistep-disabled;
+        border-radius: 50%;
+        position: relative;
+        text-align: center;
+        margin: auto;
+        z-index: 2;
+        overflow: hidden;
+      }
+
+
+    }
+
+    .phase {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1;
+      color: scale-color($multistep-disabled, $lightness: -30%);
+    }
+
+    &.todo {
+      a:not(.next) {
+        cursor: not-allowed;
+        color: $multistep-disabled;
+      }
+    }
+
+    &.done {
+      .step {
+        border-color: $multistep-active;
+        background: white;
+
+        &:before {
+          content: "\f00c";
+          @extend %FontAwesome900;
+          font-size: 10px;
+          color: $multistep-active;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-weight: 900;
+        }
+      }
+
+      .phase {
+        display: none;
+      }
+    }
+
+    &.doing {
+      .step {
+        background: white;
+        border-color: $multistep-active;
+
+        &:before {
+          content: "";
+          display: block;
+          width: 200%;
+          height: 200%;
+          left: 0;
+          position: absolute;
+          background: $multistep-active;
+          animation: load 4s infinite ease-in;
+        }
+      }
+
+      .phase {
+        animation: changeColor 4s infinite linear;
+      }
+
+      .btn.next {
+        display: none;
+      }
+    }
+
+    &.done:before,
+    &.doing:before {
+      background: $multistep-active;
+    }
+
+    &.active {
+
+      .step {
+        border-color: $multistep-active;
+      }
+
+      &:not(.doing) .step {
+
+        background: $multistep-active;
+
+        &:before {
+          color: white;
+        }
+      }
+
+      .text {
+        color: $multistep-active;
+        margin-top: 6px;
+      }
+
+      &:not(.doing) .phase {
+        color: white;
+      }
+
+      &:before {
+        background: $multistep-active;
+      }
+
+      .step, i {
+        transform: scale(1.3);
+      }
+
+      .btn.next {
+        display: none;
+      }
+    }
+
+  }
+
+  .initialState {
+    width: auto;
+
+    .item-box {
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $multistep-active;
+    }
+
+    i {
+      color: $multistep-active;
+      background: $multistep-background;
+      z-index: 1;
+    }
+
+
+    &.active {
+      i {
+        @extend %FontAwesome900;
+      }
+    }
+
+  }
+
+  .step-box.disabled {
+
+    &:before {
+      border-color: $multistep-disabled;
+    }
+
+    a, i {
+      cursor: not-allowed;
+      color: $multistep-disabled;
+    }
+
+    a {
+
+      &:hover {
+        color: $multistep-disabled;
+
+        .step {
+          width: 20px;
+          height: 20px;
+          border: 2px solid $multistep-disabled;
+          background: $multistep-disabled;
+          border-radius: 50%;
+          position: relative;
+          text-align: center;
+          margin: auto;
+          z-index: 2;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  .btn.next {
+    border-radius: 0;
+    font-size: 10px;
+    padding: 2px 6px;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    border: unset;
+    color: white !important;
+    text-transform: uppercase;
+
+    &[disabled] {
+      opacity: 1;
+      background: rgb(131, 143, 141);
+      color: rgb(65, 64, 64);
+    }
+  }
+
+
+  &.closed {
+    padding: 10px;
+
+    .text {
+      display: none;
+    }
+
+    .close-multistep {
+      transform: rotate(180deg);
+    }
+  }
+
+}
+
+.hasMultiStep {
+  .content {
+    overflow-x: hidden;
+
+  }
+
+
+}
+
+// animation
+@keyframes pulse {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes load {
+  from {
+    width: 0;
+  }
+  to {
+    width: 140%;
+  }
+}
+
+@keyframes changeColor {
+  100% {
+    color: white;
+  }
+}

@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  mantistablex:
+    container_name: mantistablex_web
+    image: cremarco/mantistablex:latest
+    command: bash -c "python3 manage.py collectstatic --noinput && python3 manage.py makemigrations && python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8005"
+    #command: bash -c "python3 manage.py runserver 0.0.0.0:8005"
+    volumes:
+      - .:/mantistablex-tool.py
+      - /mantistablex-tool.py/node_modules
+    ports:
+      - "8005:8005"
+#    depends_on:
+#      - redis
+#      - mongo
+#      - celery_worker
+#    environment:
+#      - REDIS_URI=redis://mantistablex_redis_1:6379
+#      - TERM=xterm-256color`
+  mongo:
+    container_name: mantistablex_mongo
+    image: mongo
+    #ports:
+    #  - "27017:27017"
+    volumes:
+      - ./mongo-data:/data/db
+      
+#  redis:
+#    image: redis
+#    #ports:
+#    #  - "6379:6379"
+#  celery_worker:
+#    <<: *mantistablex1
+#    command: celery -A app worker --loglevel=info
+#    ports: []
+#    depends_on:
+#      - redis
+#      - mongo

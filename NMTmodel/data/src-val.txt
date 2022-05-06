@@ -1,0 +1,17 @@
+Mountain elevation xsd:integer
+Mountain mountainRange MountainRange
+Mountain firstAscentYear xsd:gYear
+Company assets xsd:double
+Company industry Company
+Company country Country
+Company sales xsd:double
+Company revenue xsd:double
+Company rank xsd:integer
+Company equity xsd:double
+VideoGame genre VideoGame
+VideoGame year xsd:gYear
+VideoGame computingPlatform Device
+VideoGame developer Company
+Monarch birthDate xsd:string
+Monarch deathDate xsd:string
+Monarch reign xsd:string

@@ -1,0 +1,120 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Table Summarisation - {% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block favicon %}
+        {% load static %}
+        <link rel="apple-touch-icon" href="{% static '/mantistablex/icon.png' %}">
+        <link rel="shortcut icon" href="{% static '/mantistablex/favicon.ico' %}"/>
+    {% endblock %}
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+    {% block css %}
+        {% load static %}
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="{% static '/bootstrap/dist/css/bootstrap.css' %}">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+              integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+              crossorigin="anonymous">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="{% static '/ionicons/dist/css/ionicons.css' %}">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="{% static '/admin-lte/dist/css/AdminLTE.css' %}">
+        <!-- AdminLTE Skins -->
+        <link rel="stylesheet" href="{% static '/admin-lte/dist/css/skins/_all-skins.css' %}">
+        <!-- CSS -->
+        <link rel="stylesheet" href="{% static '/mantistablex/css/style.css' %}">
+        <!-- Bootstraptable-->
+        <link href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css" rel="stylesheet">
+
+    {% endblock %}
+</head>
+
+<body class="hold-transition skin-green sidebar-mini sidebar-collapse sde-fixed">
+
+{% block container %}{% endblock %}
+
+{% block javascript %}
+    {% load static %}
+    <script>
+      function getCookie (name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+          var cookies = document.cookie.split(';');
+          for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[ i ]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+              break;
+            }
+          }
+        }
+        return cookieValue;
+      }
+
+      function csrfSafeMethod (method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+      }
+    </script>
+    <!-- jQuery -->
+    <script src="{% static '/jquery/dist/jquery.min.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static '/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <!-- SlimScroll -->
+    <script src="{% static '/jquery-slimscroll/jquery.slimscroll.min.js' %}"></script>
+    <!-- AdminLTE -->
+    <script src="{% static '/admin-lte/dist/js/adminlte.min.js' %}"></script>
+    <!-- Bootstraptable -->
+    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+    <!-- Custom JS -->
+    <script src="{% static '/mantistablex/js/app.js' %}"></script>
+
+    <script>
+
+      function getCookie (name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+          var cookies = document.cookie.split(';');
+          for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[ i ]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+              break;
+            }
+          }
+        }
+        return cookieValue;
+      }
+
+      function csrfSafeMethod (method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+      }
+
+       var csrftoken = getCookie('csrftoken');
+
+        $.ajaxSetup({
+          beforeSend: function (xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+              xhr.setRequestHeader('X-CSRFToken', csrftoken);
+            }
+          }
+        });
+
+    </script>
+{% endblock %}
+
+</body>
+
+</html>

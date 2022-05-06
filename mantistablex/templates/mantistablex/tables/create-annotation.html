@@ -1,0 +1,169 @@
+{% extends "mantistablex/base-dashboard.html" %}
+
+{% block title %}
+    {{ block.super }}
+    Upload
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+    {% load static %}
+
+{% endblock %}
+
+
+{% block content %}
+    {{ block.super }}
+
+    <div class="twoSide-layout">
+        <div class="container-fluid">
+            <div class="row flex">
+
+                <div class="col col-md-6">
+                    <div class="container-form">
+
+                        <h1>Upload annotations</h1>
+                        <form id="form" enctype="multipart/form-data" method="post"
+                              action="{% url 'addAnnotation' table.id %}">
+                            {% csrf_token %}
+                            {{ table.name }}
+
+                            <div class="form-group material file {% if invalidfile %}error{% endif %}">
+                                {{ form.json_file }}
+                                {{ form.json_file.label_tag }}
+                                {% if invalidfile %}
+                                    <div class="error-message">
+                                        Insert correct file
+                                    </div>
+                                {% endif %}
+
+                            </div>
+
+                            <div class="form-group dropdown material">
+                                {{ form.gs_type }}
+                                {{ form.gs_type.label_tag }}
+                            </div>
+                            <button type="submit" id="submit" class="btn btn-primary btn-block">Submit
+                                <!--<span class="glyphicon glyphicon-share-alt"></span>-->
+                            </button>
+
+                            <div>
+                                <a href="{% url 'showTable' table.id %}" class="btn btn-block">
+                                    <i class="fas fa-arrow-left"></i>
+                                    Back
+                                </a>
+                            </div>
+                            {% if validfile %}
+                                <div class="alert alert-success" style="text-align:center;" role="alert">
+                                    ANNOTATION SUCCESSFULLY UPLOADED
+                                </div>
+                            {% endif %}
+
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col col-md-6 background">
+
+                    <h3>File types supported</h3>
+
+                    <p>
+                        At the moment, Table Summarisation only supports tables in <strong>CSV</strong> format.</p>
+
+
+                    <p>A comma-separated values (CSV) file is a delimited text file that uses a comma to separate
+                        values. CSV is a common data exchange format that is widely supported by consumer, business, and
+                        scientific applications.</p>
+
+
+                    <pre id="pre">
+<strong>CSV example</strong>
+Year,Make,Model,Description,Price
+1997,Ford,E350,"ac, abs, moon",3000.00
+1999,Chevy,"Venture ""Extended Edition""","",4900.00
+1999,Chevy,"Venture ""Extended Edition, Very Large""",,5000.00
+1996,Jeep,Grand Cherokee,"MUST SELL!
+air, moon roof, loaded",4799.00</pre>
+
+
+                    <p>
+
+                        If your data is in a different format, you have to convert it first. </p>
+                    <p>Some tools you can use: </p>
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>JSON to CSV</th>
+                            <th>HTML to CSV</th>
+                            <th>Excel to JSON</th>
+
+
+                        </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                        <tr>
+                            <td>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="https://json-csv.com/" target="_blank">
+                                            www.json-csv.com
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="http://www.convertcsv.com/json-to-csv.htm" target="_blank">
+                                            www.convertcsv.com
+                                        </a>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="http://beautifytools.com/html-to-csv-converter.php"
+                                           target="_blank">
+                                            www.beautifytools.com
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.convertcsv.com/html-table-to-csv.htm" target="_blank">
+                                            www.convertjson.com
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="https://codebeautify.org/excel-to-json" target="_blank">
+                                            www.codebeautify.org
+                                        </a>
+                                    </li>
+
+
+                                </ul>
+                            </td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    {{ block.super }}
+
+    <script>
+
+    </script>
+
+{% endblock %}

@@ -1,0 +1,4 @@
+dbo:Mountain rises xsd:integer meters above sea level
+dbo:Mountain belongs to the dbo:MountainRange range
+The first official ascent of dbo:Mountain dates back to xsd:date
+dbo:Mountain has a wikipedia page at xsd:anyURI

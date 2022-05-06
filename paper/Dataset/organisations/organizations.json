@@ -1,0 +1,1002 @@
+[
+    {
+        "Rank": "1",
+        "Company": "HSBC Holdings",
+        "Country": "United Kingdom",
+        "Industry": "Banking",
+        "Sales ($bil)": "146.50",
+        "Profits ($bil)": "19.13",
+        "Assets ($bil)": "2,348.98",
+        "Market Value ($bil)": "180.81"
+    },
+    {
+        "Rank": "2",
+        "Company": "General Electric",
+        "Country": "United States",
+        "Industry": "Conglomerates",
+        "Sales ($bil)": "172.74",
+        "Profits ($bil)": "22.21",
+        "Assets ($bil)": "795.34",
+        "Market Value ($bil)": "330.93"
+    },
+    {
+        "Rank": "3",
+        "Company": "Bank of America",
+        "Country": "United States",
+        "Industry": "Banking",
+        "Sales ($bil)": "119.19",
+        "Profits ($bil)": "14.98",
+        "Assets ($bil)": "1,715.75",
+        "Market Value ($bil)": "176.53"
+    },
+    {
+        "Rank": "4",
+        "Company": "JPMorgan Chase",
+        "Country": "United States",
+        "Industry": "Banking",
+        "Sales ($bil)": "116.35",
+        "Profits ($bil)": "15.37",
+        "Assets ($bil)": "1,562.15",
+        "Market Value ($bil)": "136.88"
+    },
+    {
+        "Rank": "5",
+        "Company": "ExxonMobil",
+        "Country": "United States",
+        "Industry": "Oil & Gas Operations",
+        "Sales ($bil)": "358.60",
+        "Profits ($bil)": "40.61",
+        "Assets ($bil)": "242.08",
+        "Market Value ($bil)": "465.51"
+    },
+    {
+        "Rank": "6",
+        "Company": "Royal Dutch Shell",
+        "Country": "Netherlands",
+        "Industry": "Oil & Gas Operations",
+        "Sales ($bil)": "355.78",
+        "Profits ($bil)": "31.33",
+        "Assets ($bil)": "266.22",
+        "Market Value ($bil)": "221.09"
+    },
+    {
+        "Rank": "7",
+        "Company": "BP",
+        "Country": "United Kingdom",
+        "Industry": "Oil & Gas Operations",
+        "Sales ($bil)": "281.03",
+        "Profits ($bil)": "20.60",
+        "Assets ($bil)": "236.08",
+        "Market Value ($bil)": "204.94"
+    },
+    {
+        "Rank": "8",
+        "Company": "Toyota Motor",
+        "Country": "Japan",
+        "Industry": "Consumer Durables",
+        "Sales ($bil)": "203.80",
+        "Profits ($bil)": "13.99",
+        "Assets ($bil)": "276.38",
+        "Market Value ($bil)": "175.08"
+    },
+    {
+        "Rank": "9",
+        "Company": "ING Group",
+        "Country": "Netherlands",
+        "Industry": "Insurance",
+        "Sales ($bil)": "197.93",
+        "Profits ($bil)": "12.65",
+        "Assets ($bil)": "1,932.15",
+        "Market Value ($bil)": "75.78"
+    },
+    {
+        "Rank": "10",
+        "Company": "Berkshire Hathaway",
+        "Country": "United States",
+        "Industry": "Diversified Financials",
+        "Sales ($bil)": "118.25",
+        "Profits ($bil)": "13.21",
+        "Assets ($bil)": "273.16",
+        "Market Value ($bil)": "216.65"
+    },
+    {
+        "Rank": "10",
+        "Company": "Royal Bank of Scotland",
+        "Country": "United Kingdom",
+        "Industry": "Banking",
+        "Sales ($bil)": "108.45",
+        "Profits ($bil)": "14.62",
+        "Assets ($bil)": "3,807.51",
+        "Market Value ($bil)": "76.64"
+    },
+    {
+        "Rank": "12",
+        "Company": "AT&T",
+        "Country": "United States",
+        "Industry": "Telecommunications Services",
+        "Sales ($bil)": "118.93",
+        "Profits ($bil)": "11.95",
+        "Assets ($bil)": "275.64",
+        "Market Value ($bil)": "210.22"
+    },
+    {
+        "Rank": "13",
+        "Company": "BNP Paribas",
+        "Country": "France",
+        "Industry": "Banking",
+        "Sales ($bil)": "116.16",
+        "Profits ($bil)": "10.71",
+        "Assets ($bil)": "2,494.41",
+        "Market Value ($bil)": "81.90"
+    },
+    {
+        "Rank": "14",
+        "Company": "Allianz",
+        "Country": "Germany",
+        "Industry": "Insurance",
+        "Sales ($bil)": "139.12",
+        "Profits ($bil)": "10.90",
+        "Assets ($bil)": "1,547.48",
+        "Market Value ($bil)": "80.30"
+    },
+    {
+        "Rank": "15",
+        "Company": "Total",
+        "Country": "France",
+        "Industry": "Oil & Gas Operations",
+        "Sales ($bil)": "199.74",
+        "Profits ($bil)": "19.24",
+        "Assets ($bil)": "165.75",
+        "Market Value ($bil)": "181.80"
+    },
+    {
+        "Rank": "16",
+        "Company": "Wal-Mart Stores",
+        "Country": "United States",
+        "Industry": "Retailing",
+        "Sales ($bil)": "378.80",
+        "Profits ($bil)": "12.73",
+        "Assets ($bil)": "163.38",
+        "Market Value ($bil)": "198.60"
+    },
+    {
+        "Rank": "17",
+        "Company": "Chevron",
+        "Country": "United States",
+        "Industry": "Oil & Gas Operations",
+        "Sales ($bil)": "203.97",
+        "Profits ($bil)": "18.69",
+        "Assets ($bil)": "148.79",
+        "Market Value ($bil)": "179.97"
+    },
+    {
+        "Rank": "18",
+        "Company": "American Intl Group",
+        "Country": "United States",
+        "Industry": "Insurance",
+        "Sales ($bil)": "110.06",
+        "Profits ($bil)": "6.20",
+        "Assets ($bil)": "1,060.51",
+        "Market Value ($bil)": "118.20"
+    },
+    {
+        "Rank": "19",
+        "Company": "Gazprom",
+        "Country": "Russia",
+        "Industry": "Oil & Gas Operations",
+        "Sales ($bil)": "81.76",
+        "Profits ($bil)": "23.30",
+        "Assets ($bil)": "201.72",
+        "Market Value ($bil)": "306.79"
+    },
+    {
+        "Rank": "20",
+        "Company": "AXA Group",
+        "Country": "France",
+        "Industry": "Insurance",
+        "Sales ($bil)": "151.70",
+        "Profits ($bil)": "7.75",
+        "Assets ($bil)": "1,064.67",
+        "Market Value ($bil)": "70.33"
+    },
+    {
+        "Rank": "21",
+        "Company": "Banco Santander",
+        "Country": "Spain",
+        "Industry": "Banking",
+        "Sales ($bil)": "72.26",
+        "Profits ($bil)": "10.02",
+        "Assets ($bil)": "1,332.72",
+        "Market Value ($bil)": "113.27"
+    },
+    {
+        "Rank": "22",
+        "Company": "ConocoPhillips",
+        "Country": "United States",
+        "Industry": "Oil & Gas Operations",
+        "Sales ($bil)": "171.50",
+        "Profits ($bil)": "11.89",
+        "Assets ($bil)": "177.76",
+        "Market Value ($bil)": "129.15"
+    },
+    {
+        "Rank": "23",
+        "Company": "Goldman Sachs Group",
+        "Country": "United States",
+        "Industry": "Diversified Financials",
+        "Sales ($bil)": "87.97",
+        "Profits ($bil)": "11.60",
+        "Assets ($bil)": "1,119.80",
+        "Market Value ($bil)": "67.16"
+    },
+    {
+        "Rank": "24",
+        "Company": "Citigroup",
+        "Country": "United States",
+        "Industry": "Banking",
+        "Sales ($bil)": "159.23",
+        "Profits ($bil)": "3.62",
+        "Assets ($bil)": "2,187.63",
+        "Market Value ($bil)": "123.44"
+    },
+    {
+        "Rank": "25",
+        "Company": "Barclays",
+        "Country": "United Kingdom",
+        "Industry": "Banking",
+        "Sales ($bil)": "79.70",
+        "Profits ($bil)": "8.76",
+        "Assets ($bil)": "2,432.34",
+        "Market Value ($bil)": "62.43"
+    },
+    {
+        "Rank": "26",
+        "Company": "EDF Group",
+        "Country": "France",
+        "Industry": "Utilities",
+        "Sales ($bil)": "81.60",
+        "Profits ($bil)": "7.69",
+        "Assets ($bil)": "271.66",
+        "Market Value ($bil)": "170.81"
+    },
+    {
+        "Rank": "27",
+        "Company": "E.ON",
+        "Country": "Germany",
+        "Industry": "Utilities",
+        "Sales ($bil)": "94.04",
+        "Profits ($bil)": "9.86",
+        "Assets ($bil)": "200.84",
+        "Market Value ($bil)": "126.22"
+    },
+    {
+        "Rank": "28",
+        "Company": "ENI",
+        "Country": "Italy",
+        "Industry": "Oil & Gas Operations",
+        "Sales ($bil)": "119.27",
+        "Profits ($bil)": "13.70",
+        "Assets ($bil)": "128.15",
+        "Market Value ($bil)": "127.38"
+    },
+    {
+        "Rank": "29",
+        "Company": "Petrobras-Petr?leo Brasil",
+        "Country": "Brazil",
+        "Industry": "Oil & Gas Operations",
+        "Sales ($bil)": "87.52",
+        "Profits ($bil)": "11.04",
+        "Assets ($bil)": "129.98",
+        "Market Value ($bil)": "236.67"
+    },
+    {
+        "Rank": "30",
+        "Company": "PetroChina",
+        "Country": "China",
+        "Industry": "Oil & Gas Operations",
+        "Sales ($bil)": "88.24",
+        "Profits ($bil)": "18.21",
+        "Assets ($bil)": "111.70",
+        "Market Value ($bil)": "546.14"
+    },
+    {
+        "Rank": "31",
+        "Company": "Procter & Gamble",
+        "Country": "United States",
+        "Industry": "Household & Personal Products",
+        "Sales ($bil)": "79.74",
+        "Profits ($bil)": "11.13",
+        "Assets ($bil)": "144.40",
+        "Market Value ($bil)": "203.67"
+    },
+    {
+        "Rank": "32",
+        "Company": "Deutsche Bank",
+        "Country": "Germany",
+        "Industry": "Diversified Financials",
+        "Sales ($bil)": "95.50",
+        "Profits ($bil)": "7.45",
+        "Assets ($bil)": "1,485.58",
+        "Market Value ($bil)": "56.27"
+    },
+    {
+        "Rank": "33",
+        "Company": "UniCredit Group",
+        "Country": "Italy",
+        "Industry": "Banking",
+        "Sales ($bil)": "63.67",
+        "Profits ($bil)": "7.19",
+        "Assets ($bil)": "1,077.21",
+        "Market Value ($bil)": "77.46"
+    },
+    {
+        "Rank": "34",
+        "Company": "Telef?nica",
+        "Country": "Spain",
+        "Industry": "Telecommunications Services",
+        "Sales ($bil)": "82.40",
+        "Profits ($bil)": "13.00",
+        "Assets ($bil)": "143.13",
+        "Market Value ($bil)": "138.42"
+    },
+    {
+        "Rank": "35",
+        "Company": "Mitsubishi UFJ Financial",
+        "Country": "Japan",
+        "Industry": "Banking",
+        "Sales ($bil)": "49.49",
+        "Profits ($bil)": "7.50",
+        "Assets ($bil)": "1,591.56",
+        "Market Value ($bil)": "98.14"
+    },
+    {
+        "Rank": "36",
+        "Company": "Volkswagen Group",
+        "Country": "Germany",
+        "Industry": "Consumer Durables",
+        "Sales ($bil)": "149.00",
+        "Profits ($bil)": "5.64",
+        "Assets ($bil)": "210.88",
+        "Market Value ($bil)": "90.23"
+    },
+    {
+        "Rank": "37",
+        "Company": "IBM",
+        "Country": "United States",
+        "Industry": "Software & Services",
+        "Sales ($bil)": "98.79",
+        "Profits ($bil)": "10.42",
+        "Assets ($bil)": "120.43",
+        "Market Value ($bil)": "157.62"
+    },
+    {
+        "Rank": "38",
+        "Company": "ArcelorMittal",
+        "Country": "Luxembourg",
+        "Industry": "Materials",
+        "Sales ($bil)": "105.22",
+        "Profits ($bil)": "10.37",
+        "Assets ($bil)": "133.65",
+        "Market Value ($bil)": "108.82"
+    },
+    {
+        "Rank": "38",
+        "Company": "Daimler",
+        "Country": "Germany",
+        "Industry": "Consumer Durables",
+        "Sales ($bil)": "145.11",
+        "Profits ($bil)": "5.82",
+        "Assets ($bil)": "199.77",
+        "Market Value ($bil)": "85.16"
+    },
+    {
+        "Rank": "40",
+        "Company": "BBVA-Banco Bilbao Vizcaya",
+        "Country": "Spain",
+        "Industry": "Banking",
+        "Sales ($bil)": "54.34",
+        "Profits ($bil)": "8.94",
+        "Assets ($bil)": "733.14",
+        "Market Value ($bil)": "78.29"
+    },
+    {
+        "Rank": "41",
+        "Company": "Wells Fargo",
+        "Country": "United States",
+        "Industry": "Banking",
+        "Sales ($bil)": "53.59",
+        "Profits ($bil)": "8.06",
+        "Assets ($bil)": "575.44",
+        "Market Value ($bil)": "96.37"
+    },
+    {
+        "Rank": "42",
+        "Company": "ICBC",
+        "Country": "China",
+        "Industry": "Banking",
+        "Sales ($bil)": "37.48",
+        "Profits ($bil)": "6.31",
+        "Assets ($bil)": "961.65",
+        "Market Value ($bil)": "289.57"
+    },
+    {
+        "Rank": "43",
+        "Company": "Credit Suisse Group",
+        "Country": "Switzerland",
+        "Industry": "Diversified Financials",
+        "Sales ($bil)": "83.72",
+        "Profits ($bil)": "7.53",
+        "Assets ($bil)": "1,194.75",
+        "Market Value ($bil)": "50.85"
+    },
+    {
+        "Rank": "44",
+        "Company": "HBOS",
+        "Country": "United Kingdom",
+        "Industry": "Banking",
+        "Sales ($bil)": "100.32",
+        "Profits ($bil)": "8.10",
+        "Assets ($bil)": "1,336.17",
+        "Market Value ($bil)": "44.84"
+    },
+    {
+        "Rank": "45",
+        "Company": "Cr?dit Agricole",
+        "Country": "France",
+        "Industry": "Banking",
+        "Sales ($bil)": "101.59",
+        "Profits ($bil)": "6.49",
+        "Assets ($bil)": "1,662.60",
+        "Market Value ($bil)": "45.73"
+    },
+    {
+        "Rank": "45",
+        "Company": "Nestl?",
+        "Country": "Switzerland",
+        "Industry": "Food Drink & Tobacco",
+        "Sales ($bil)": "94.76",
+        "Profits ($bil)": "9.38",
+        "Assets ($bil)": "99.06",
+        "Market Value ($bil)": "188.11"
+    },
+    {
+        "Rank": "47",
+        "Company": "Fortis",
+        "Country": "Netherlands",
+        "Industry": "Diversified Financials",
+        "Sales ($bil)": "121.19",
+        "Profits ($bil)": "5.46",
+        "Assets ($bil)": "1,020.98",
+        "Market Value ($bil)": "49.04"
+    },
+    {
+        "Rank": "48",
+        "Company": "Verizon Communications",
+        "Country": "United States",
+        "Industry": "Telecommunications Services",
+        "Sales ($bil)": "93.47",
+        "Profits ($bil)": "5.65",
+        "Assets ($bil)": "186.96",
+        "Market Value ($bil)": "104.27"
+    },
+    {
+        "Rank": "49",
+        "Company": "France Telecom",
+        "Country": "France",
+        "Industry": "Telecommunications Services",
+        "Sales ($bil)": "77.31",
+        "Profits ($bil)": "9.20",
+        "Assets ($bil)": "137.09",
+        "Market Value ($bil)": "87.89"
+    },
+    {
+        "Rank": "50",
+        "Company": "Siemens",
+        "Country": "Germany",
+        "Industry": "Conglomerates",
+        "Sales ($bil)": "103.20",
+        "Profits ($bil)": "5.42",
+        "Assets ($bil)": "126.72",
+        "Market Value ($bil)": "118.47"
+    },
+    {
+        "Rank": "50",
+        "Company": "Wachovia",
+        "Country": "United States",
+        "Industry": "Banking",
+        "Sales ($bil)": "55.53",
+        "Profits ($bil)": "6.31",
+        "Assets ($bil)": "782.90",
+        "Market Value ($bil)": "60.69"
+    },
+    {
+        "Rank": "52",
+        "Company": "Sinopec-China Petroleum",
+        "Country": "China",
+        "Industry": "Oil & Gas Operations",
+        "Sales ($bil)": "133.79",
+        "Profits ($bil)": "6.90",
+        "Assets ($bil)": "77.44",
+        "Market Value ($bil)": "186.38"
+    },
+    {
+        "Rank": "53",
+        "Company": "Hewlett-Packard",
+        "Country": "United States",
+        "Industry": "Technology Hardware & Equip",
+        "Sales ($bil)": "107.67",
+        "Profits ($bil)": "7.85",
+        "Assets ($bil)": "88.57",
+        "Market Value ($bil)": "122.04"
+    },
+    {
+        "Rank": "54",
+        "Company": "Lloyds TSB Group",
+        "Country": "United Kingdom",
+        "Industry": "Banking",
+        "Sales ($bil)": "58.74",
+        "Profits ($bil)": "6.53",
+        "Assets ($bil)": "701.08",
+        "Market Value ($bil)": "50.95"
+    },
+    {
+        "Rank": "55",
+        "Company": "Royal Bank of Canada",
+        "Country": "Canada",
+        "Industry": "Banking",
+        "Sales ($bil)": "43.57",
+        "Profits ($bil)": "5.77",
+        "Assets ($bil)": "629.96",
+        "Market Value ($bil)": "64.41"
+    },
+    {
+        "Rank": "56",
+        "Company": "Bank of China",
+        "Country": "China",
+        "Industry": "Banking",
+        "Sales ($bil)": "31.13",
+        "Profits ($bil)": "5.49",
+        "Assets ($bil)": "679.57",
+        "Market Value ($bil)": "171.45"
+    },
+    {
+        "Rank": "57",
+        "Company": "Pfizer",
+        "Country": "United States",
+        "Industry": "Drugs & Biotechnology",
+        "Sales ($bil)": "48.42",
+        "Profits ($bil)": "8.14",
+        "Assets ($bil)": "115.27",
+        "Market Value ($bil)": "152.17"
+    },
+    {
+        "Rank": "58",
+        "Company": "Johnson & Johnson",
+        "Country": "United States",
+        "Industry": "Drugs & Biotechnology",
+        "Sales ($bil)": "61.10",
+        "Profits ($bil)": "10.58",
+        "Assets ($bil)": "80.95",
+        "Market Value ($bil)": "175.51"
+    },
+    {
+        "Rank": "59",
+        "Company": "Samsung Electronics",
+        "Country": "South Korea",
+        "Industry": "Semiconductors",
+        "Sales ($bil)": "92.26",
+        "Profits ($bil)": "8.56",
+        "Assets ($bil)": "87.49",
+        "Market Value ($bil)": "87.84"
+    },
+    {
+        "Rank": "60",
+        "Company": "StatoilHydro",
+        "Country": "Norway",
+        "Industry": "Oil & Gas Operations",
+        "Sales ($bil)": "89.00",
+        "Profits ($bil)": "7.52",
+        "Assets ($bil)": "89.16",
+        "Market Value ($bil)": "98.36"
+    },
+    {
+        "Rank": "61",
+        "Company": "Generali Group",
+        "Country": "Italy",
+        "Industry": "Insurance",
+        "Sales ($bil)": "102.16",
+        "Profits ($bil)": "3.17",
+        "Assets ($bil)": "486.43",
+        "Market Value ($bil)": "60.79"
+    },
+    {
+        "Rank": "62",
+        "Company": "CCB-China Construction Bank",
+        "Country": "China",
+        "Industry": "Banking",
+        "Sales ($bil)": "29.16",
+        "Profits ($bil)": "5.93",
+        "Assets ($bil)": "697.44",
+        "Market Value ($bil)": "126.55"
+    },
+    {
+        "Rank": "63",
+        "Company": "Microsoft",
+        "Country": "United States",
+        "Industry": "Software & Services",
+        "Sales ($bil)": "57.90",
+        "Profits ($bil)": "16.96",
+        "Assets ($bil)": "67.34",
+        "Market Value ($bil)": "253.15"
+    },
+    {
+        "Rank": "64",
+        "Company": "Suez Group",
+        "Country": "France",
+        "Industry": "Utilities",
+        "Sales ($bil)": "64.96",
+        "Profits ($bil)": "5.37",
+        "Assets ($bil)": "114.89",
+        "Market Value ($bil)": "83.56"
+    },
+    {
+        "Rank": "65",
+        "Company": "Zurich Financial Services",
+        "Country": "Switzerland",
+        "Industry": "Insurance",
+        "Sales ($bil)": "55.05",
+        "Profits ($bil)": "5.63",
+        "Assets ($bil)": "387.67",
+        "Market Value ($bil)": "45.76"
+    },
+    {
+        "Rank": "66",
+        "Company": "Nippon Telegraph & Tel",
+        "Country": "Japan",
+        "Industry": "Telecommunications Services",
+        "Sales ($bil)": "91.57",
+        "Profits ($bil)": "4.06",
+        "Assets ($bil)": "149.71",
+        "Market Value ($bil)": "60.27"
+    },
+    {
+        "Rank": "67",
+        "Company": "Sanofi-aventis",
+        "Country": "France",
+        "Industry": "Drugs & Biotechnology",
+        "Sales ($bil)": "40.95",
+        "Profits ($bil)": "7.68",
+        "Assets ($bil)": "104.98",
+        "Market Value ($bil)": "101.17"
+    },
+    {
+        "Rank": "68",
+        "Company": "Honda Motor",
+        "Country": "Japan",
+        "Industry": "Consumer Durables",
+        "Sales ($bil)": "94.35",
+        "Profits ($bil)": "5.04",
+        "Assets ($bil)": "101.82",
+        "Market Value ($bil)": "56.82"
+    },
+    {
+        "Rank": "69",
+        "Company": "Nokia",
+        "Country": "Finland",
+        "Industry": "Technology Hardware & Equip",
+        "Sales ($bil)": "74.54",
+        "Profits ($bil)": "10.52",
+        "Assets ($bil)": "52.62",
+        "Market Value ($bil)": "145.66"
+    },
+    {
+        "Rank": "70",
+        "Company": "Munich Re",
+        "Country": "Germany",
+        "Industry": "Insurance",
+        "Sales ($bil)": "67.57",
+        "Profits ($bil)": "5.63",
+        "Assets ($bil)": "306.03",
+        "Market Value ($bil)": "37.34"
+    },
+    {
+        "Rank": "71",
+        "Company": "Mizuho Financial",
+        "Country": "Japan",
+        "Industry": "Banking",
+        "Sales ($bil)": "32.52",
+        "Profits ($bil)": "5.28",
+        "Assets ($bil)": "1,272.17",
+        "Market Value ($bil)": "48.80"
+    },
+    {
+        "Rank": "72",
+        "Company": "Novartis",
+        "Country": "Switzerland",
+        "Industry": "Drugs & Biotechnology",
+        "Sales ($bil)": "40.22",
+        "Profits ($bil)": "12.62",
+        "Assets ($bil)": "71.89",
+        "Market Value ($bil)": "111.62"
+    },
+    {
+        "Rank": "73",
+        "Company": "MetLife",
+        "Country": "United States",
+        "Industry": "Insurance",
+        "Sales ($bil)": "53.01",
+        "Profits ($bil)": "4.32",
+        "Assets ($bil)": "558.56",
+        "Market Value ($bil)": "41.32"
+    },
+    {
+        "Rank": "74",
+        "Company": "Roche Holding",
+        "Country": "Switzerland",
+        "Industry": "Drugs & Biotechnology",
+        "Sales ($bil)": "40.65",
+        "Profits ($bil)": "8.60",
+        "Assets ($bil)": "67.72",
+        "Market Value ($bil)": "169.32"
+    },
+    {
+        "Rank": "75",
+        "Company": "Morgan Stanley",
+        "Country": "United States",
+        "Industry": "Diversified Financials",
+        "Sales ($bil)": "85.33",
+        "Profits ($bil)": "2.56",
+        "Assets ($bil)": "1,045.41",
+        "Market Value ($bil)": "46.53"
+    },
+    {
+        "Rank": "76",
+        "Company": "Vale",
+        "Country": "Brazil",
+        "Industry": "Materials",
+        "Sales ($bil)": "33.23",
+        "Profits ($bil)": "10.26",
+        "Assets ($bil)": "74.70",
+        "Market Value ($bil)": "161.39"
+    },
+    {
+        "Rank": "77",
+        "Company": "Rio Tinto",
+        "Country": "United Kingdom/Australia",
+        "Industry": "Materials",
+        "Sales ($bil)": "29.70",
+        "Profits ($bil)": "7.31",
+        "Assets ($bil)": "100.81",
+        "Market Value ($bil)": "165.48"
+    },
+    {
+        "Rank": "78",
+        "Company": "China Mobile",
+        "Country": "Hong Kong/China",
+        "Industry": "Telecommunications Services",
+        "Sales ($bil)": "37.06",
+        "Profits ($bil)": "8.29",
+        "Assets ($bil)": "62.44",
+        "Market Value ($bil)": "308.59"
+    },
+    {
+        "Rank": "79",
+        "Company": "GlaxoSmithKline",
+        "Country": "United Kingdom",
+        "Industry": "Drugs & Biotechnology",
+        "Sales ($bil)": "45.07",
+        "Profits ($bil)": "10.35",
+        "Assets ($bil)": "57.16",
+        "Market Value ($bil)": "120.05"
+    },
+    {
+        "Rank": "80",
+        "Company": "BASF",
+        "Country": "Germany",
+        "Industry": "Chemicals",
+        "Sales ($bil)": "84.60",
+        "Profits ($bil)": "5.93",
+        "Assets ($bil)": "67.33",
+        "Market Value ($bil)": "60.96"
+    },
+    {
+        "Rank": "81",
+        "Company": "RWE Group",
+        "Country": "Germany",
+        "Industry": "Utilities",
+        "Sales ($bil)": "56.17",
+        "Profits ($bil)": "3.64",
+        "Assets ($bil)": "119.50",
+        "Market Value ($bil)": "68.19"
+    },
+    {
+        "Rank": "82",
+        "Company": "Sumitomo Mitsui Financial",
+        "Country": "Japan",
+        "Industry": "Banking",
+        "Sales ($bil)": "33.04",
+        "Profits ($bil)": "3.76",
+        "Assets ($bil)": "850.75",
+        "Market Value ($bil)": "56.10"
+    },
+    {
+        "Rank": "83",
+        "Company": "BHP Billiton",
+        "Country": "Australia/United Kingdom",
+        "Industry": "Materials",
+        "Sales ($bil)": "39.50",
+        "Profits ($bil)": "13.42",
+        "Assets ($bil)": "53.36",
+        "Market Value ($bil)": "190.62"
+    },
+    {
+        "Rank": "84",
+        "Company": "Time Warner",
+        "Country": "United States",
+        "Industry": "Media",
+        "Sales ($bil)": "46.48",
+        "Profits ($bil)": "4.39",
+        "Assets ($bil)": "133.83",
+        "Market Value ($bil)": "55.83"
+    },
+    {
+        "Rank": "85",
+        "Company": "Banco Bradesco",
+        "Country": "Brazil",
+        "Industry": "Banking",
+        "Sales ($bil)": "36.12",
+        "Profits ($bil)": "4.11",
+        "Assets ($bil)": "192.65",
+        "Market Value ($bil)": "59.80"
+    },
+    {
+        "Rank": "85",
+        "Company": "KBC Group",
+        "Country": "Belgium",
+        "Industry": "Banking",
+        "Sales ($bil)": "35.22",
+        "Profits ($bil)": "4.66",
+        "Assets ($bil)": "517.98",
+        "Market Value ($bil)": "43.66"
+    },
+    {
+        "Rank": "87",
+        "Company": "Dexia",
+        "Country": "Belgium",
+        "Industry": "Banking",
+        "Sales ($bil)": "140.78",
+        "Profits ($bil)": "3.47",
+        "Assets ($bil)": "889.98",
+        "Market Value ($bil)": "28.04"
+    },
+    {
+        "Rank": "88",
+        "Company": "Altria Group",
+        "Country": "United States",
+        "Industry": "Food Drink & Tobacco",
+        "Sales ($bil)": "38.05",
+        "Profits ($bil)": "9.16",
+        "Assets ($bil)": "57.21",
+        "Market Value ($bil)": "154.20"
+    },
+    {
+        "Rank": "89",
+        "Company": "National Australia Bank",
+        "Country": "Australia",
+        "Industry": "Banking",
+        "Sales ($bil)": "38.88",
+        "Profits ($bil)": "4.06",
+        "Assets ($bil)": "499.44",
+        "Market Value ($bil)": "43.95"
+    },
+    {
+        "Rank": "90",
+        "Company": "Cisco Systems",
+        "Country": "United States",
+        "Industry": "Technology Hardware & Equip",
+        "Sales ($bil)": "37.68",
+        "Profits ($bil)": "8.07",
+        "Assets ($bil)": "55.30",
+        "Market Value ($bil)": "145.39"
+    },
+    {
+        "Rank": "91",
+        "Company": "Manulife Financial",
+        "Country": "Canada",
+        "Industry": "Insurance",
+        "Sales ($bil)": "33.08",
+        "Profits ($bil)": "4.01",
+        "Assets ($bil)": "178.58",
+        "Market Value ($bil)": "59.18"
+    },
+    {
+        "Rank": "92",
+        "Company": "Bank of Nova Scotia",
+        "Country": "Canada",
+        "Industry": "Banking",
+        "Sales ($bil)": "28.02",
+        "Profits ($bil)": "4.25",
+        "Assets ($bil)": "431.30",
+        "Market Value ($bil)": "48.08"
+    },
+    {
+        "Rank": "93",
+        "Company": "Intel",
+        "Country": "United States",
+        "Industry": "Semiconductors",
+        "Sales ($bil)": "38.33",
+        "Profits ($bil)": "6.98",
+        "Assets ($bil)": "55.65",
+        "Market Value ($bil)": "115.59"
+    },
+    {
+        "Rank": "94",
+        "Company": "Unilever",
+        "Country": "Netherlands/United Kingdom",
+        "Industry": "Food Drink & Tobacco",
+        "Sales ($bil)": "54.82",
+        "Profits ($bil)": "5.30",
+        "Assets ($bil)": "53.40",
+        "Market Value ($bil)": "92.75"
+    },
+    {
+        "Rank": "95",
+        "Company": "Toronto-Dominion Bank",
+        "Country": "Canada",
+        "Industry": "Banking",
+        "Sales ($bil)": "26.51",
+        "Profits ($bil)": "4.20",
+        "Assets ($bil)": "443.56",
+        "Market Value ($bil)": "48.38"
+    },
+    {
+        "Rank": "96",
+        "Company": "Nissan Motor",
+        "Country": "Japan",
+        "Industry": "Consumer Durables",
+        "Sales ($bil)": "89.09",
+        "Profits ($bil)": "3.92",
+        "Assets ($bil)": "104.20",
+        "Market Value ($bil)": "37.90"
+    },
+    {
+        "Rank": "97",
+        "Company": "Lehman Bros Holdings",
+        "Country": "United States",
+        "Industry": "Diversified Financials",
+        "Sales ($bil)": "59.00",
+        "Profits ($bil)": "4.19",
+        "Assets ($bil)": "691.06",
+        "Market Value ($bil)": "27.05"
+    },
+    {
+        "Rank": "98",
+        "Company": "Carrefour Group",
+        "Country": "France",
+        "Industry": "Food Markets",
+        "Sales ($bil)": "112.40",
+        "Profits ($bil)": "3.15",
+        "Assets ($bil)": "75.73",
+        "Market Value ($bil)": "49.95"
+    },
+    {
+        "Rank": "99",
+        "Company": "Commonwealth Bank",
+        "Country": "Australia",
+        "Industry": "Banking",
+        "Sales ($bil)": "26.48",
+        "Profits ($bil)": "3.80",
+        "Assets ($bil)": "360.42",
+        "Market Value ($bil)": "51.86"
+    },
+    {
+        "Rank": "100",
+        "Company": "Boeing",
+        "Country": "United States",
+        "Industry": "Aerospace & Defense",
+        "Sales ($bil)": "66.39",
+        "Profits ($bil)": "4.07",
+        "Assets ($bil)": "58.99",
+        "Market Value ($bil)": "63.32"
+    }
+]

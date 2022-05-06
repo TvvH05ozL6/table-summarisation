@@ -1,0 +1,156 @@
+{% extends "mantistablex/base-dashboard.html" %}
+
+{% block title %}
+    {{ block.super }}
+    Triples Visualization
+{% endblock %}
+
+{% block css %}
+
+    {{ block.super }}
+    {% load static %}
+{% endblock %}
+
+{{ block.super }}
+{% block table_info %}
+    <ul class="tableInfo">
+        <li class="name">{{ table.name }} - {{ table.file_name }}</li>
+        <li class="stats">
+            <span class="number">{{ table.num_cols }}</span>
+            <span class="description">columns</span>
+        </li>
+        <li class="stats">
+            <span class="number">{{ table.num_rows }}</span>
+            <span class="description">rows</span>
+        </li>
+
+        <li class="stats">
+        <span class="number smaller">
+            <span class="uppercase">{{ familiarity }}</span>
+        </span>
+            <span class="description">familiarity</span>
+        </li>
+
+        <li class="stats">
+        <span class="number smaller">
+            <span class="uppercase">{{ interest }}</span>
+        </span>
+            <span class="description">interest</span>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block process %}
+    {% if table.process %}
+        <div class="multiStep-horizontal">
+            {% include 'mantistablex/multistep.html' with step_index=2 show_next=True  %}
+
+            <!-- close arrow-->
+            <i class="fas fa-chevron-up close-multistep"></i>
+
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+
+    <div id="triples-view" class="flex flex-dir-column h100">
+
+        <div class="row-eq-height" style="overflow-y: auto; margin-bottom: 40px;">
+
+            <div class="{% if neural_network_output %}col-md-6 section-light{% else %} col-xs-12 {% endif %} ">
+                <div class="header-section">
+                    <h3>Selected Triples</h3>
+                </div>
+                <div class="body-section">
+                    {% include "mantistablex/tables/triples-list.html" %}
+
+                </div>
+            </div>
+            <!--TODO add Neural network output -->
+            {% if neaural_network_output %}
+                <div class="col-md-6 section-medium">
+                    <div class="header-section">
+                        <h3>Neural network output</h3>
+                    </div>
+                    <div class="body-section">
+                        <div class="row">
+                            <div class="col col-sm-12">
+                                <div class="alert alert-warning" role="alert">
+                                    <h4 class="alert-heading">Warning!</h4>
+                                    <p>No neural network output.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="mt-auto bottom-box">
+            <div class="table-responsive ">
+                <table class="table table-striped table-bordered sde-table" id="table-bootstrap"></table>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+    {{ block.super }}
+
+    <script>
+      const subjectIndex = parseInt({{ subject_index }});
+      const rawData = {{ table_datas_bootstrap | safe }};
+      const header = {{ table_header_bootstrap | safe }};
+
+      function headerStyle (column) {
+        if (column.fieldIndex === subjectIndex) {
+          return {
+            [ column.field ]: {
+              classes: 'highlight'
+            },
+          }[ column.field ];
+        }
+      }
+
+      $(function () {
+
+        initTable(header, rawData, {}, 250);
+
+        $('.show-in-table').on('click', function () {
+          $(".triples-list li").removeClass("selected");
+          const $button = $(this);
+          const $tripleItem = $button.closest('li');
+          $tripleItem.addClass("selected");
+          const rowIndex = parseInt($tripleItem.attr('data-index-row') - 1); // index start from 1, need 0
+          const colIndex = parseInt($tripleItem.attr('data-index-col'));
+          let colIndexes = [];
+
+          if (colIndex !== subjectIndex)
+            colIndexes.push(subjectIndex, colIndex);
+          else
+            colIndexes.push(subjectIndex);
+
+          const highlightData = {
+            colIndexes: colIndexes, rowIndexes: [rowIndex]
+          };
+          reInitTable(header, rawData, highlightData, 250);
+
+          $table = $('#table-bootstrap');
+          $table.bootstrapTable('refreshOptions', {
+            headerStyle: colIndex === subjectIndex ? headerStyle : null
+          });
+
+          $table.bootstrapTable('scrollTo', {unit: 'rows', value: rowIndex})
+
+        });
+
+      });
+
+    </script>
+
+{% endblock %}
+

@@ -1,0 +1,37 @@
+{% if triples %}
+    <ul class="triples-list list-unstyled">
+        {% for t in triples %}
+            <li data-index-row="{{ t.indexes.row }}" data-index-col="{{ t.indexes.col }}">
+                {% if "http" in t.triple.sbj %}
+                    <<a href="{{ t.triple.sbj }}" target="_blank">{{ t.triple.sbj }}</a>>
+                {% else %}
+                    "{{ t.triple.sbj }}"
+                {% endif %}
+                {% if "http" in t.triple.pred %}
+                    <<a href="{{ t.triple.pred }}" target="_blank">{{ t.triple.pred }}</a>>
+                {% else %}
+                    "{{ t.triple.pred }}"
+                {% endif %}
+                {% if "http" in t.triple.obj %}
+                    <<a href="{{ t.triple.obj }}" target="_blank">{{ t.triple.obj }}</a>>
+                {% else %}
+                    "{{ t.triple.obj }}"
+                {% endif %}
+                {% if not hidebutton %}
+                <button class="btn btn-outline-secondary show-in-table btn-xs">
+                    <i class="fas fa-table"></i>
+                </button>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <div class="row">
+        <div class="col col-sm-12">
+            <div class="alert alert-warning" role="alert">
+                <h4 class="alert-heading">Warning!</h4>
+                <p>No triples.</p>
+            </div>
+        </div>
+    </div>
+{% endif %}

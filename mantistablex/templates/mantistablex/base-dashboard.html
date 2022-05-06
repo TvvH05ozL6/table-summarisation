@@ -1,0 +1,63 @@
+{% extends "mantistablex/base.html" %}
+
+{% block container %}
+    <div class="wrapper">
+
+        <header class="main-header">
+
+            <a href="{% url 'home' %}" class="logo">
+                <span class="logo-mini"><b>TS</b></span>
+                <span class="logo-lg"><b>TABLE</b>Summarisation</span>
+            </a>
+
+            <nav class="navbar navbar-static-top">
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="panel-icon"> </span>
+                </a>
+
+                {% block table_info %}
+                    {{ block.super }}
+                {% endblock %}
+                <div class="ml-auto">
+                    {% block action %}
+                        {{ block.super }}
+                    {% endblock %}
+                </div>
+            </nav>
+        </header>
+
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <ul class="sidebar-menu" data-widget="tree">
+                    {% with request.resolver_match.url_name as url_name %}
+                        <li class="{% if url_name == 'createTables' %}active{% endif %}">
+                            <a href="{% url 'createTables' %}">
+                                <i class="fas fa-plus"></i><span>Insert Table</span>
+                            </a>
+                        </li>
+
+                        <li class="{% if url_name == 'home' %}active{% endif %}">
+                            <a href="{% url 'home' %}">
+                                <i class="fas fa-table"></i><span>All Tables</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin">
+                                <i class="fas fa-tools"></i><span>Admin</span>
+                            </a>
+                        </li>
+                    {% endwith %}
+                </ul>
+            </section>
+        </aside>
+
+        <div class="content-wrapper">
+            {% block process %}{% endblock %}
+
+            <section class="content">
+                {% block content %}{% endblock %}
+            </section>
+        </div>
+
+    </div>
+{% endblock %}

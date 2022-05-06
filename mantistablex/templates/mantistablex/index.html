@@ -1,0 +1,48 @@
+{% extends "mantistablex/base.html" %}
+
+{% block css %}
+{{ block.super }}
+{% load static %}
+
+<link href="{% static 'mantistablex/css/home.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block container %}
+<div id="home">
+
+    <div class="header">
+        <div class="wrapper">
+            <img class="logo" src="{% static 'mantistablex/images/mantistablex_logo.png' %}"/>
+
+            <h1 class="title"><span class="bold">TABLE</span>Summarisation</h1>
+            <div class="subhead">&nbsp;</div>
+        </div>
+    </div>
+
+    <div class="features">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <figure class="preview">
+                        <img src="{% static 'mantistablex/images/preview.jpg' %}"/>
+                    </figure>
+                </div>
+                <div class="col-xs-12 ">
+                    <div class="feature">
+                        {% if text %}
+                        {{ string }}
+                        {% else %}
+                        <p>Ciao.</p>
+                        {% endif %}
+                        <div class="center">
+                            <a class="btn" href="{% url 'home' %}">Start now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

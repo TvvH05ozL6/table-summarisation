@@ -1,0 +1,81 @@
+{#step_index#}
+{% with request.resolver_match.url_name as url_name %}
+
+    <div class="step-box {% if url_name == 'showTable' %} active{% endif %}">
+        <a href="{% url 'showTable' table.id %}" class="item-box">
+             <div class="step"></div>
+            <span class="text">Load annotations</span>
+        </a>
+    </div>
+
+
+
+    <div class="step-box {% if url_name == 'selectFamiliarity' %} active{% endif %} ">
+
+        {% if step_index == 0 and show_next %}
+            <a href="{% url 'selectFamiliarity' table.id %}" class="btn btn-primary next">
+                Next
+            </a>
+        {% endif %}
+
+        {% if step_index < 1 %}
+            <div class="item-box">
+                <div class="step"></div>
+                <span class="text">Select familiarity and interest</span>
+            </div>
+        {% else %}
+            <a href="{% url 'selectFamiliarity' table.id %}" class="item-box">
+                <div class="step"></div>
+                <span class="text">Select familiarity and interest</span>
+            </a>
+        {% endif %}
+
+    </div>
+
+    <div class="step-box {% if url_name == 'triplesViz' %} active{% endif %}">
+        {% if step_index == 1 and show_next %}
+            <a href="{% url 'triplesViz' table.id %}" class="btn btn-primary next">
+                Next
+            </a>
+        {% endif %}
+
+        {% if step_index < 2 %}
+           <div class="item-box">
+                <div class="step"></div>
+                <span class="text">Triples visualizations</span>
+            </div>
+        {% else %}
+           <a href="{% url 'triplesViz' table.id %}" class="item-box">
+                <div class="step"></div>
+                <span class="text">Triples visualizations</span>
+            </a>
+
+        {% endif %}
+
+    </div>
+
+    <div class="step-box {% if url_name == 'summary' %} active{% endif %}">
+        {% if step_index == 2 and show_next %}
+            <a href="{% url 'summary' table.id %}" class="btn btn-primary next">
+                Next
+            </a>
+        {% endif %}
+
+        {% if step_index < 3 %}
+           <div class="item-box">
+                <div class="step"></div>
+                <span class="text">Summary</span>
+            </div>
+        {% else %}
+           <a href="{% url 'summary' table.id %}" class="item-box">
+                <div class="step"></div>
+                <span class="text">Summary</span>
+            </a>
+
+        {% endif %}
+
+    </div>
+
+{% endwith %}
+
+

@@ -1,0 +1,269 @@
+%bg-image {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../images/background.jpg");
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+  }
+}
+
+#home {
+  background: $home-up-bg;
+  font-family: $font;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  @extend %bg-image;
+
+  .header {
+    background-color: $home-up-bg;
+    @extend %bg-image;
+    text-align: center;
+    padding: 20px 20px 100px;
+    position: relative;
+  }
+
+  .wrapper {
+    z-index: 1;
+    position: relative;
+    background-color: transparent;
+    overflow: visible;
+  }
+
+  .logo {
+    max-width: 60px;
+    margin-bottom: 12px;
+    @include breakpoint(small) {
+      max-width: 90px;
+    }
+  }
+
+  .subhead, .title {
+    color: $home-title-color;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .subhead {
+    color: white;
+    font-size: 24px;
+    position: relative;
+    padding-bottom: 20px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 10%;
+      max-width: 200px;
+      height: 6px;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      z-index: 9;
+    }
+  }
+
+  .title {
+    font-size: 24px;
+    margin: 0;
+    white-space: normal;
+    @include breakpoint(small) {
+      font-size: 50px;
+    }
+    @include breakpoint(medium) {
+      font-size: 80px;
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+  }
+
+  .preview {
+    max-width: 800px;
+    box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    margin: (-7%) auto 0;
+    position: relative;
+    z-index: 1;
+
+    img {
+      max-width: 100%;
+      border-radius: inherit;
+    }
+  }
+
+  .btn {
+    font-size: 18px;
+    margin: 40px 0 0;
+    border: 2px solid $home-btn-color;
+    color: $home-btn-color;
+    position: relative;
+    transition: all 0.2s;
+    z-index: 1;
+
+    &:before, &:after {
+      content: "";
+      background: $home-btn-hover-bg;
+      height: 100%;
+      width: 0;
+      position: absolute;
+      top: 0;
+      transition: all 0.2s;
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &:after {
+      right: 0;
+    }
+
+    &:hover {
+      color: $home-btn-hover-color;
+
+      &:before, &:after {
+        width: 55%;
+        z-index: -1;
+      }
+    }
+  }
+
+  .features {
+    padding: 20px 0;
+    position: relative;
+    font-size: 24px;
+    text-align: center;
+    color: $home-text-color;
+    flex: 1 1 auto;
+
+    &:before {
+      position: absolute;
+      content: "";
+      background: linear-gradient(#{$home-bg-deg}deg, rgba($home-up-bg, 0) 24%, $home-bottom-bg 0, $home-bottom-bg);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .grid-3 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      .feature {
+        width: calc((100% / 3) - 60px);
+        margin: 30px;
+      }
+    }
+
+    .feature {
+      margin: 20px auto;
+
+      .btn {
+        font-size: 30px;
+        padding: 10px;
+        text-decoration: none;
+      }
+    }
+
+    .feature-title {
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1.1;
+      margin-bottom: 10px;
+
+      strong {
+        font-size: 28px;
+      }
+    }
+
+    .feature-description {
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+
+  .footer {
+    @extend %bg-image;
+    border-top: 2px solid $home-up-bg;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    position: relative;
+    background: white;
+
+    .flex {
+      align-items: flex-start;
+    }
+
+    .unimib .lab {
+      .title {
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1;
+        color: black;
+        display: block;
+      }
+
+      .text {
+        display: block;
+      }
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .unimib .disco {
+      max-width: 95px;
+      margin-right: 15px;
+
+      a {
+        display: block;
+      }
+    }
+
+    .bitbucket {
+      align-items: center;
+      position: relative;
+      margin-top: 20px;
+      padding-top: 10px;
+      text-align: center;
+
+      &:before {
+        content: "";
+        width: 20%;
+        height: 1px;
+        background: #6b6b6b;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+      }
+
+      .logo-sm {
+        max-width: 15px;
+        display: inline-block;
+      }
+
+      .text {
+        font-weight: 400;
+        vertical-align: middle;
+        font-size: 14px;
+        color: #0b4ead;
+      }
+    }
+  }
+}

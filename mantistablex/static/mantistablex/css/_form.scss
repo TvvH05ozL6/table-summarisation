@@ -1,0 +1,199 @@
+.form-group.material {
+  position: relative;
+  margin: 15px 0 35px;
+
+  * {
+    transition: all .2s;
+  }
+
+  input:not([type="file"]),
+  select,
+  &.file {
+    height: 56px;
+    padding: 0 12px;
+    color: $light-gray;
+    background: transparent;
+    box-shadow: unset;
+    border: 1px solid $light-gray;
+    border-radius: 4px !important;
+    caret-color: $skin-color;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    font-weight: normal;
+  }
+
+  label,
+  .prefix {
+    font-size: 16px;
+    color: $light-gray;
+    font-weight: normal;
+    left: 8px; /*12-4*/
+    margin: 0;
+    position: absolute;
+    top: 16px;
+    padding: 0 4px;
+    text-transform: initial;
+  }
+
+  label {
+    background: #ecf0f5; /*background page color*/
+  }
+
+  .prefix {
+    display: none;
+    line-height: 24px
+  }
+
+  input:focus + label + .prefix,
+  input:valid + label + .prefix {
+    display: block;
+  }
+
+  input:focus,
+  select:focus {
+    border: 2px solid $skin-color !important;
+    outline: unset;
+
+  }
+
+  input:focus + label,
+  input:valid + label,
+  select:focus + label,
+  select:valid + label,
+  &.file input[type="file"] + label,
+  &.disabled input + label {
+    font-size: 12px;
+    top: -8px;
+    z-index: 2;
+  }
+
+  input:focus,
+  input:valid + label,
+  input:focus ~ .prefix,
+  select:focus,
+  select:valid + label {
+    color: $dark-gray;
+  }
+
+  input:focus + label,
+  select:focus + label {
+    color: $skin-color;
+  }
+
+  &.dropdown {
+    select {
+      /*remove dropdown arrow*/
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      padding-right: 30px;
+    }
+
+    option {
+      font-size: 16px;
+      color: $light-gray;
+      padding: 20px;
+
+      &.first {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: '\f0d7';
+      @extend %FontAwesome900;
+      position: absolute;
+      right: 15px;
+      top: 16px;
+      color: $dark-gray;
+      font-size: 16px;
+    }
+  }
+
+  &.file {
+    display: flex;
+    align-items: center;
+
+    input {
+      width: 100%;
+      position: relative;
+      bottom: -5px;
+    }
+  }
+
+  &.disabled {
+    opacity: .7;
+
+    input {
+      cursor: default;
+    }
+  }
+
+  &.condensed {
+    input:not([type="file"]),
+    select,
+    &.file {
+      height: 35px;
+      font-size: 14px;
+    }
+
+    label,
+    .prefix {
+      font-size: 14px;
+      top: 8px;
+    }
+
+    &.dropdown:after {
+      top: 8px;
+    }
+  }
+
+  &.error input:not([type="file"]),
+  &.file.error {
+    border-color: $danger;
+  }
+
+  &.error label {
+    color: $danger !important;
+  }
+
+  .error-message {
+    font-size: 12px;
+    position: absolute;
+    bottom: -20px;
+    color: $danger;
+    left: 8px; /*12-4*/
+  }
+
+}
+
+.submit-form {
+  overflow: hidden;
+
+  span:after {
+    font-family: FontAwesome;
+    position: absolute;
+    right: -50px;
+    content: "\f00c";
+    transition: all .2s;
+  }
+
+  &.click span:after {
+    right: -20px;
+  }
+
+  span {
+    position: relative;
+    display: block;
+    transition: all .2s;
+    transition-delay: .1s;
+    transform: translateX(0);
+  }
+
+  &.click span {
+    transform: translateX(-10px);
+  }
+}

@@ -1,0 +1,24 @@
+save_data: NMTmodel/run/data
+## Where the vocab(s) will be written
+src_vocab: NMTmodel/run/data.vocab.src
+tgt_vocab: NMTmodel/run/data.vocab.tgt
+# Prevent overwriting existing files in the folder
+overwrite: False
+# Train on a single GPU
+#world_size: 1
+#gpu_ranks: [0]
+
+# Where to save the checkpoints
+save_model: NMTmodel/run/model
+save_checkpoint_steps: 500
+train_steps: 1000
+valid_steps: 500
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src: NMTmodel/data/src-train.txt
+        path_tgt: NMTmodel/data/tgt-train.txt
+    valid:
+        path_src: NMTmodel/data/src-val.txt
+        path_tgt: NMTmodel/data/tgt-val.txt
